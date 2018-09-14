@@ -366,8 +366,9 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  Pushing the **locale** attribute into the User's RBAC session the runtime will match that instance data with their stored policy.
 
- ![Image4](images/user1_123.png "View user1_123 data")
- *Notice that this user has been assigned both Teller and Washer, via **ftRA** attribute, and that another attribute, **ftRC**, constrains where it can be activated.*
+ ![Image4](images/user123.png "View user123 data")
+
+ *Notice that this user has been assigned Page1, Page2 and Page3 roles, via **ftRA** attribute, and that another attribute, **ftRC**, constrains which customer it can be activated.*
 
 ### How the ABAC algorithm works:
  * When the runtime iterates over assigned roles (ftRA), trying to activate them one-by-one, it matches the constraint pushed in, e.g. locale=north, with its associated role constraint (ftRC).
