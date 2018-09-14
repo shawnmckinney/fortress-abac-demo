@@ -230,6 +230,55 @@ This sample web app uses Java EE security.
 
 To gain full understanding, check out the file used to load it into the LDAP directory: [fortress-abac-sample security policy](src/main/resources/fortress-demo-load-policy.xml).
 
+#### 1. User-to-Role Assignment Table
+
+ For this app, user-to-role assignments are:
+
+| user       | Page1       | Page2    | Page3    |
+| ---------- | ----------- | -------- | -------- |
+| poweruser  | true        | true     | true     |
+| user123    | true        | true     | true     |
+| user456    | true        | true     | true     |
+| user789    | true        | true     | true     |
+| user1      | true        | false    | false    |
+| user1_123  | true        | false    | false    |
+| user1_456  | false       | true     | false    |
+| user1_789  | false       | false    | true     |
+| user2      | false       | true     | false    |
+| user2_123  | true        | false    | false    |
+| user2_456  | false       | true     | false    |
+| user2_789  | false       | false    | true     |
+| user3      | false       | false    | true     |
+| user3_123  | true        | false    | false    |
+| user3_456  | false       | true     | false    |
+| user3_789  | false       | false    | true     |
+
+
+
+#### 2. User-to-Role Activation Table by Branch
+
+ But we want to control role activation using attributes based on Customer number:
+
+| user       | Page1       | Page2       | Page3       |
+| ---------- | ----------- | ----------- | ----------- |
+| poweruser  | 123,456,789 | 123,456,789 | 123,456,789 |
+| user123    | 123         | 123         | 123         |
+| user456    | 456         | 456         | 456         |
+| user789    | 789         | 789         | 789         |
+| user1      | 123,456,789 |             |             |
+| user1_123  | 123         |             |             |
+| user1_456  | 456         |             |             |
+| user1_789  | 789         |             |             |
+| user2      |             | 123,456,789 |             |
+| user2_123  |             | 123         |             |
+| user2_456  |             | 456         |             |
+| user2_789  |             | 789         |             |
+| user3      |             |             | 123,456,789 |
+| user3_123  |             |             | 123         |
+| user3_456  |             |             | 456         |
+| user3_789  |             |             | 789         |
+
+
 ## SECTION VII. Manually Test the RBAC with ABAC sample
 
 #### 1. Open link to [http://localhost:8080/fortress-abac-sample](http://localhost:8080/fortress-abac-sample)
@@ -237,6 +286,8 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 #### 2. Login with Java EE authentication form:
 
 #### 3. User-Password Table
+
+ Password = 'password' for all:
 
  | userId        | Password      |
  | ------------- | ------------- |
@@ -248,20 +299,24 @@ To gain full understanding, check out the file used to load it into the LDAP dir
  | user3         | password      |
  | ...           | password      |
 
-#### 4. Enter a customer & for user and click on the button.
+
+#### 4. Click on a page link.
+
+#### 5. Enter a customer number for user and click on the button.
 
  ```
  Enter 123, 456, or 789
  ```
 
-#### 5. Once the constraint is set, buttons will appear corresponding with the user's allowed role for that customer.
+ ![Image1](images/EnterCustomerNumber.png "Set Customer Number")
 
+#### 6. Once the location is set, buttons appear simulating user access for that particular customer.
 
-#### 6. Click on the link, and then buttons appear simulating user access for that particular customer.
+ ![Image2](images/Page1Buttons "Page1 Buttons")
 
 #### 7. Try a different user.
 
- Each has different access rights to application.
+ Each has different access rights to application based on their constraints.
 
 ## SECTION VII. Automatically Test the RBAC with ABAC sample
 
@@ -282,7 +337,9 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  How does this work?  Have a look at some code...
 
- Paraphrased from [WicketSampleBasePage.java](src/main/java/org/rbacabac/WicketSampleBasePage.java):
+ Paraphrased from [MyBasePage.java](src/main/java/com/mycompany/MyBasePage.java):
+
+ Every time a constraint is activated, some code executes like this....
 
  ```java
  // Nothing new here:
