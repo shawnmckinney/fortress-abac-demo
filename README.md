@@ -371,7 +371,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
  *Notice that this user has been assigned Page1, Page2 and Page3 roles, via **ftRA** attribute, and that another attribute, **ftRC**, constrains which customer it can be activated.*
 
 ### How the ABAC algorithm works:
- * When the runtime iterates over assigned roles (ftRA), trying to activate them one-by-one, it matches the constraint pushed in, e.g. locale=north, with its associated role constraint (ftRC).
+ * When the runtime iterates over assigned roles (ftRA), trying to activate them one-by-one, it matches the constraint pushed in, e.g. customer=123, with its associated role constraint (ftRC).
  * If it finds a match, the role can be activated into the session, otherwise not.
 
 ### When does it get executed:
