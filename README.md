@@ -312,7 +312,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
 #### 6. Once the location is set, buttons appear simulating user access for that particular customer.
 
- ![Image2](images/Page1Buttons "Page1 Buttons")
+ ![Image2](images/Page1Buttons.png "Page1 Buttons")
 
 #### 7. Try a different user.
 
