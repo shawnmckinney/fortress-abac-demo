@@ -1,0 +1,9 @@
+<Context reloadable="true">
+
+    <Realm className="org.apache.directory.fortress.realm.tomcat.Tc7AccessMgrProxy"
+           defaultRoles="ROLE_ABAC_SUPER_USER, FORTRESS_ABAC_DEMO_ALL_PAGES, ROLE_ABAC_DEMO_P1, ROLE_ABAC_DEMO_P2, ROLE_ABAC_DEMO_P3"
+           containerType="TomcatContext"
+           contextId="HOME"
+           realmClasspath=""
+            />
+</Context>

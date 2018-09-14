@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ This is free and unencumbered software released into the public domain.
+  -->
+<project basedir="../../../" default="all" name="Fortress ABAC Demo RBAC Policy">
+
+    <taskdef classname="org.apache.directory.fortress.core.ant.FortressAntTask" name="FortressAdmin" >
+        <classpath path="${java.class.path}"/>
+    </taskdef>
+
+    <target name="all">
+        <FortressAdmin>
+
+            <deluser>
+                <user userId="superuser"/>
+                <user userId="poweruser"/>
+                <user userId="user1"/>
+                <user userId="user1_123"/>
+                <user userId="user1_456"/>
+                <user userId="user1_789"/>
+                <user userId="user2"/>
+                <user userId="user2_123"/>
+                <user userId="user2_456"/>
+                <user userId="user2_789"/>
+                <user userId="user3"/>
+                <user userId="user3_123"/>
+                <user userId="user3_456"/>
+                <user userId="user3_789"/>
+                <user userId="user123"/>
+                <user userId="user456"/>
+                <user userId="user789"/>
+            </deluser>
+
+            <adduser>
+                <user userId="superuser" password="password" description="Fortress ABAC Demo SuperUser" ou="Demo2Users" cn="test2" sn="superuser"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="poweruser" password="password" description="Fortress ABAC Demo PowerUser" ou="Demo2Users" cn="test2" sn="poweruser"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user1" password="password" description="Fortress ABAC Demo User1" ou="Demo2Users" cn="test2" sn="user1"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user1_123" password="password" description="Fortress ABAC Demo User1 Customer 123" ou="Demo2Users" cn="test2" sn="user1_123"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user1_456" password="password" description="Fortress ABAC Demo User1 Customer 456" ou="Demo2Users" cn="test2" sn="user1_456"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user1_789" password="password" description="Fortress ABAC Demo User1 Customer 123" ou="Demo2Users" cn="test2" sn="user1_789"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user2" password="password" description="Fortress ABAC Demo User2" ou="Demo2Users" cn="test2" sn="user2"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user2_123" password="password" description="Fortress ABAC Demo User2 Customer 123" ou="Demo2Users" cn="test2" sn="user2_123"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user2_456" password="password" description="Fortress ABAC Demo User2 Customer 456" ou="Demo2Users" cn="test2" sn="user2_456"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user2_789" password="password" description="Fortress ABAC Demo User2 Customer 789" ou="Demo2Users" cn="test2" sn="user2_789"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user3" password="password" description="Fortress ABAC Demo User3" ou="Demo2Users" cn="test2" sn="user3"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user3_123" password="password" description="Fortress ABAC Demo User3 Customer 123" ou="Demo2Users" cn="test2" sn="user3_123"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user3_456" password="password" description="Fortress ABAC Demo User3 Customer 456" ou="Demo2Users" cn="test2" sn="user3_456"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user3_789" password="password" description="Apache Fortress Demo User3 Customer 789" ou="Demo2Users" cn="test2" sn="user3_789"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user123" password="password" description="Apache Fortress Demo User123 Access all Pages for Customer 123" ou="Demo2Users" cn="test2" sn="user123"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user456" password="password" description="Apache Fortress Demo User456 Access all Pages for Customer 456" ou="Demo2Users" cn="test2" sn="user456"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+                <user userId="user789" password="password" description="Apache Fortress Demo User789 Access all Pages for Customer 789" ou="Demo2Users" cn="test2" sn="user789"  beginTime="0000" endTime="0000" beginDate="20090101" endDate="20990101" beginLockDate="none" endLockDate="none" dayMask="1234567" timeout="0" photo="p27.jpeg" />
+
+            </adduser>
+
+            <delroleconstraint>
+                <!-- Rle constraints w/out userid bind a particular role to a particular constraint name. -->
+                <roleconstraint role="ABAC_PAGE1" key="customer" typeName="USER"/>
+                <roleconstraint role="ABAC_PAGE2" key="customer" typeName="USER"/>
+                <roleconstraint role="ABAC_PAGE3" key="customer" typeName="USER"/>
+            </delroleconstraint>
+
+            <addroleconstraint>
+                <!-- Rle constraints w/out userid bind a particular role to a particular constraint name. -->
+                <roleconstraint role="ABAC_PAGE1" key="customer" typeName="USER"/>
+                <roleconstraint role="ABAC_PAGE2" key="customer" typeName="USER"/>
+                <roleconstraint role="ABAC_PAGE3" key="customer" typeName="USER"/>
+
+                <roleconstraint userId="poweruser" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="poweruser" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="poweruser" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+
+                <roleconstraint userId="poweruser" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="poweruser" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="poweruser" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+
+                <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+
+                <!-- User1 Access to all Customers Page1 only, with DSD constraints -->
+                <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+
+                <!-- User1_123 Access to Page 1, Customer 123 only -->
+                <roleconstraint userId="user1_123" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+
+                <!-- User1_456 Access to Page 1, Customer 456 only -->
+                <roleconstraint userId="User1_456" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+
+                <!-- User1_789 Access to Page 1, Customer 789 only -->
+                <roleconstraint userId="User1_789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+
+                <!-- User2 Access to all Customers Page2 only, with DSD constraints -->
+                <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+
+                <!-- User2_123 Access to Page 2, Customer 123 only -->
+                <roleconstraint userId="User2_123" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+
+                <!-- User2_456 Access to Page 2, Customer 456 only -->
+                <roleconstraint userId="User2_456" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+
+                <!-- User2_789 Access to Page 2, Customer 789 only -->
+                <roleconstraint userId="User2_789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+
+                <!-- User3 Access to all Customers Page3 only, with DSD constraints -->
+                <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+
+                <!-- User3_123 Access to Page 3, Customer 123 only -->
+                <roleconstraint userId="User3_123" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+
+                <!-- User3_456 Access to Page 3, Customer 456 only -->
+                <roleconstraint userId="User3_456" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+
+                <!-- User3_789 Access to Page 3, Customer 789 only -->
+                <roleconstraint userId="User3_789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+
+                <!-- User123 Access to all pages, Customer 123 only, with DSD constraints -->
+                <roleconstraint userId="User123" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="User123" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="User123" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+
+                <!-- User456 Access to all pages, Customer 456 only, with DSD constraints -->
+                <roleconstraint userId="User456" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="User456" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="User456" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+
+                <!-- User789 Access to all pages, Customer 789 only, with DSD constraints -->
+                <roleconstraint userId="User789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+                <roleconstraint userId="User789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+                <roleconstraint userId="User789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+
+            </addroleconstraint>
+
+
+            <adduserrole>
+                <!-- Superuser access to all pages, all data, no DSD constraints -->
+                <userrole userId="superuser" name="ROLE_ABAC_SUPER_USER" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- Poweruser access to all pages, all date, with DSD constraints -->
+                <userrole userId="poweruser" name="FORTRESS_ABAC_DEMO_ALL_PAGES" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="poweruser" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="poweruser" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="poweruser" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User1 Access to all Customers ABAC_PAGE1 only, with DSD constraints -->
+                <userrole userId="user1" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user1" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User1_123 Access to Page 1, Customer 123 only -->
+                <userrole userId="user1_123" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user1_123" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User1_456 Access to Page 1, Customer 456 only -->
+                <userrole userId="user1_456" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user1_456" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User1_789 Access to Page 1, Customer 789 only -->
+                <userrole userId="user1_789" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user1_789" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User2 Access to all Customers Page2 only, with DSD constraints -->
+                <userrole userId="user2" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user2" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User2_123 Access to Page 2, Customer 123 only -->
+                <userrole userId="user2_123" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user2_123" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User2_456 Access to Page 2, Customer 456 only -->
+                <userrole userId="user2_456" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user2_456" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User2_789 Access to Page 2, Customer 789 only -->
+                <userrole userId="user2_789" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user2_789" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User3 Access to all Customers Page3 only, with DSD constraints -->
+                <userrole userId="user3" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user3" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User3_123 Access to Page 3, Customer 123 only -->
+                <userrole userId="user3_123" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user3_123" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User3_456 Access to Page 3, Customer 456 only -->
+                <userrole userId="user3_456" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user3_456" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User3_789 Access to Page 3, Customer 789 only -->
+                <userrole userId="user3_789" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user3_789" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User123 Access to all pages, Customer 123 only, with DSD constraints -->
+                <userrole userId="user123" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user123" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user123" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user123" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user123" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user123" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User456 Access to all pages, Customer 456 only, with DSD constraints -->
+                <userrole userId="user456" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user456" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user456" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user456" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user456" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user456" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+
+                <!-- User789 Access to all pages, Customer 789 only, with DSD constraints -->
+                <userrole userId="user789" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user789" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user789" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user789" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user789" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user789" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+            </adduserrole>
+
+            <delrole>
+                <role name="ROLE_ABAC_SUPER_USER" />
+                <role name="FORTRESS_ABAC_DEMO_ALL_PAGES" />
+                <role name="ROLE_ABAC_DEMO_P1" />
+                <role name="ABAC_PAGE1" />
+                <role name="ROLE_ABAC_DEMO_P2" />
+                <role name="ABAC_PAGE2" />
+                <role name="ROLE_ABAC_DEMO_P3" />
+                <role name="ABAC_PAGE3" />
+                <role name="FORTRESS_ABAC_DEMO_USER" />
+
+            </delrole>
+
+            <addrole>
+                <role name="FORTRESS_ABAC_DEMO_USER" description="Grants User login access to this Web application"/>
+                <role name="ROLE_ABAC_SUPER_USER" description="Grants User access to all three Pages"/>
+                <role name="FORTRESS_ABAC_DEMO_ALL_PAGES" description="Grants User ability to switch between Pages"/>
+                <role name="ROLE_ABAC_DEMO_P1" description="Grants User Access to Page 1 by Spring"/>
+                <role name="ABAC_PAGE1" description="Grants User Access to Page 1 and its Buttons"/>
+                <role name="ROLE_ABAC_DEMO_P2" description="Grants User Access to Page 2 by Spring"/>
+                <role name="ABAC_PAGE2" description="Grants User Access to Page 2 and its Buttons"/>
+                <role name="ROLE_ABAC_DEMO_P3" description="Grants User Access to Page 3 by Spring"/>
+                <role name="ABAC_PAGE3" description="Grants User Access to Page 3 and its Buttons"/>
+            </addrole>
+
+            <addroleinheritance>
+                <relationship child="ROLE_ABAC_SUPER_USER" parent="FORTRESS_ABAC_DEMO_USER"/>
+                <relationship child="ROLE_ABAC_SUPER_USER" parent="FORTRESS_ABAC_DEMO_ALL_PAGES"/>
+                <relationship child="ROLE_ABAC_DEMO_P1" parent="FORTRESS_ABAC_DEMO_USER"/>
+                <relationship child="ROLE_ABAC_DEMO_P2" parent="FORTRESS_ABAC_DEMO_USER"/>
+                <relationship child="ROLE_ABAC_DEMO_P3" parent="FORTRESS_ABAC_DEMO_USER"/>
+                <relationship child="FORTRESS_ABAC_DEMO_ALL_PAGES" parent="ROLE_ABAC_DEMO_P1"/>
+                <relationship child="FORTRESS_ABAC_DEMO_ALL_PAGES" parent="ROLE_ABAC_DEMO_P2"/>
+                <relationship child="FORTRESS_ABAC_DEMO_ALL_PAGES" parent="ROLE_ABAC_DEMO_P3"/>
+            </addroleinheritance>
+
+            <addpermgrant>
+                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="FORTRESS_ABAC_DEMO_ALL_PAGES"/>
+                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P1"/>
+                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P2"/>
+                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P3"/>
+
+                <permgrant objName="com.mycompany.Page1" opName="Add"                roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.mycompany.Page1" opName="Update"             roleNm="ABAC_PAGE1" />
+                <permgrant objName="com.mycompany.Page1" opName="Delete"             roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.mycompany.Page1" opName="Search"             roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.mycompany.Page1" opName="Read"               roleNm="ABAC_PAGE1"/>
+
+                <permgrant objName="com.mycompany.Page2" opName="Add"                roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Update"             roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Delete"             roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Search"             roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Read"               roleNm="ABAC_PAGE2"/>
+
+                <permgrant objName="com.mycompany.Page3" opName="Add"                roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Update"             roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Delete"             roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Search"             roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Read"               roleNm="ABAC_PAGE3"/>
+
+                <permgrant objName="com.mycompany.Page1" opName="Add"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Update"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Delete"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Search"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Read"               roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Add"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Update"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Delete"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Search"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Add"                roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Update"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Delete"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Search"             roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Read"               roleNm="ROLE_ABAC_SUPER_USER"/>
+
+            </addpermgrant>
+
+            <delpermobj>
+                <permobj objName="com.mycompany.MyBasePage"/>
+                <permobj objName="com.mycompany.Page1"/>
+                <permobj objName="com.mycompany.Page2"/>
+                <permobj objName="com.mycompany.Page3"/>
+                <permobj objName="org.apache.directory.fortress.core.rbac.AccessMgrImpl"/>
+                <permobj objName="ROLE_ABAC_DEMO_P1" />
+                <permobj objName="ROLE_ABAC_DEMO_P2"/>
+                <permobj objName="ROLE_ABAC_DEMO_P3"/>
+            </delpermobj>
+
+            <addpermobj>
+                <permobj objName="com.mycompany.MyBasePage" description="Fortress Demo2 BasePage" ou="Demo2Perms" type="Page"/>
+                <permobj objName="com.mycompany.Page1" description="Fortress Demo2 Page 1" ou="Demo2Perms" type="Page"/>
+                <permobj objName="com.mycompany.Page2" description="Fortress Demo2 Page 2" ou="Demo2Perms" type="Page"/>
+                <permobj objName="com.mycompany.Page3" description="Fortress Demo2 Page 3" ou="Demo2Perms" type="Page"/>
+                <permobj objName="org.apache.directory.fortress.core.rbac.AccessMgrImpl" description="Used to perform role activation functions" ou="Demo2Perms" type="Page"/>
+                <permobj objName="ROLE_ABAC_DEMO_P1" description="Used to perform ROLE_ABAC_DEMO_P1 role activation functions" ou="Demo2Perms" type="Button"/>
+                <permobj objName="ROLE_ABAC_DEMO_P2" description="Used to perform ROLE_ABAC_DEMO_P12 role activation functions" ou="Demo2Perms" type="Button"/>
+                <permobj objName="ROLE_ABAC_DEMO_P3" description="Used to perform ROLE_ABAC_DEMO_P3 role activation functions" ou="Demo2Perms" type="Button"/>
+            </addpermobj>
+
+            <addpermop>
+                <permop objName="com.mycompany.MyBasePage" opName="activateConstraint" type="Button" description="Permission for com.mycompany.MyBasePage.activateConstraint"/>
+                <permop objName="ROLE_ABAC_DEMO_P1" opName="activateConstraint" type="Button" description="Permission for ROLE_ABAC_DEMO_P1.activateConstraint"/>
+                <permop objName="ROLE_ABAC_DEMO_P2" opName="activateConstraint" type="Button" description="Permission for ROLE_ABAC_DEMO_P2.activateConstraint"/>
+                <permop objName="ROLE_ABAC_DEMO_P3" opName="activateConstraint" type="Button" description="Permission for ROLE_ABAC_DEMO_P3.activateConstraint"/>
+                <permop objName="org.apache.directory.fortress.core.rbac.AccessMgrImpl" opName="activateConstraint" type="Button" description="Permission for AccessMgrImpl.activateConstraint"/>
+
+                <permop objName="com.mycompany.Page1" opName="Add"                description="Permission for page1.add"/>
+                <permop objName="com.mycompany.Page1" opName="Update"             description="Permission for page1.update"/>
+                <permop objName="com.mycompany.Page1" opName="Delete"             description="Permission for page1.delete on Customer record 789"/>
+                <permop objName="com.mycompany.Page1" opName="Search"             description="Permission for page1.search"/>
+                <permop objName="com.mycompany.Page1" opName="Read"               description="Permission for page1.read"/>
+
+                <permop objName="com.mycompany.Page2" opName="Add"                description="Permission for page2.add"/>
+                <permop objName="com.mycompany.Page2" opName="Update"             description="Permission for page1.update"/>
+                <permop objName="com.mycompany.Page2" opName="Delete"             description="Permission for page2.delete"/>
+                <permop objName="com.mycompany.Page2" opName="Search"             description="Permission for page2.search"/>
+                <permop objName="com.mycompany.Page2" opName="Read"               description="Permission for page2.read"/>
+
+                <permop objName="com.mycompany.Page3" opName="Add"                description="Permission for page3.add"/>
+                <permop objName="com.mycompany.Page3" opName="Update"             description="Permission for page3.update"/>
+                <permop objName="com.mycompany.Page3" opName="Delete"             description="Permission for page3.delete"/>
+                <permop objName="com.mycompany.Page3" opName="Search"             description="Permission for page3.search"/>
+                <permop objName="com.mycompany.Page3" opName="Read"               description="Permission for page3.read"/>
+
+            </addpermop>
+
+            <delsdset>
+                <sdset name="Demo2DSD" setType="DYNAMIC"/>
+            </delsdset>
+
+            <addsdset>
+                <sdset name="Demo2DSD" description="ROLE_TEST DATA roles are mutually exclusive" cardinality="2" setType="DYNAMIC" setmembers="ABAC_PAGE1,ABAC_PAGE2,ABAC_PAGE3"/>
+            </addsdset>
+
+            <delorgunit>
+                <orgunit name="Demo2Perms" typeName="PERM"/>
+                <orgunit name="Demo2Users" typeName="USER"/>
+            </delorgunit>
+
+            <addorgunit>
+                <orgunit name="Demo2Perms" typeName="PERM" description="Fortress Demo2 Test Permissions"/>
+                <orgunit name="Demo2Users" typeName="USER" description="Fortress Demo2 Test Users"/>
+            </addorgunit>
+
+        </FortressAdmin>
+    </target>
+</project>
