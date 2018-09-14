@@ -366,7 +366,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  Pushing the **locale** attribute into the User's RBAC session the runtime will match that instance data with their stored policy.
 
- ![Image4](images/CurlyUser.png "View Curly Data")
+ ![Image4](images/user1_123.png "View user1_123 data")
  *Notice that this user has been assigned both Teller and Washer, via **ftRA** attribute, and that another attribute, **ftRC**, constrains where it can be activated.*
 
 ### How the ABAC algorithm works:
