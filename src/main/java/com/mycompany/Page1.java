@@ -16,6 +16,7 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.Model;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,10 +31,23 @@ public class Page1 extends MyBasePage
 {
     private static final Logger LOG = Logger.getLogger( Page1.class.getName() );
     private Form editForm;
+    private String activatedCustomer;
 
     public Page1()
     {
-        this.editForm = new Page1Form( "pageForm", new CompoundPropertyModel<Page1EO>( new Page1EO() ) );
+        this.activatedCustomer = "";
+        init();
+    }
+
+    public Page1(String activatedCustomer)
+    {
+        this.activatedCustomer = activatedCustomer;
+        init();
+    }
+
+    private void init()
+    {
+        this.editForm = new Page1Form( "pageForm", new CompoundPropertyModel<>( new Page1EO() ) );
         this.editForm.setOutputMarkupId( true );
         add( this.editForm );
         setChildPage( ChildPage.PAGE1 );
@@ -56,7 +70,6 @@ public class Page1 extends MyBasePage
          */
         private void addButtons()
         {
-            LOG.info( "Page ONE ADD BUTTONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1" );
             add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_ADD, GlobalIds.PAGE1_OBJNAME, GlobalIds.ADD )
             {
                 @Override
@@ -218,9 +231,9 @@ public class Page1 extends MyBasePage
 
         private void addDetailFields()
         {
-            customer = new TextField( "customer" );
+            customer = new TextField( "customer", Model.of( activatedCustomer ) );
             add( customer );
-            customer.setRequired( true );
+            customer.setEnabled( false );
 
             TextField attr_a = new TextField( "attr_a" );
             add( attr_a );
@@ -234,26 +247,5 @@ public class Page1 extends MyBasePage
             add( attr_c );
             attr_c.setRequired( false );
         }
-
-
-/*
-        @Override
-        public void onEvent( final IEvent<?> event )
-        {
-            if ( event.getPayload() instanceof SelectModelEvent )
-            {
-                SelectModelEvent modelEvent = ( SelectModelEvent ) event.getPayload();
-                final Page1EO page1EO = ( Page1EO ) modelEvent.getEntity();
-                this.setModelObject(page1EO);
-                LOG.info("Received SelectModelEvent, customer: " + page1EO.getCustomer());
-            }
-            else if ( event.getPayload() instanceof AjaxRequestTarget )
-            {
-                AjaxRequestTarget target = ( ( AjaxRequestTarget ) event.getPayload() );
-                LOG.info( ".onEvent AjaxRequestTarget: " + target.toString() );
-                target.add( editForm );
-            }
-        }
-*/
     }
 }

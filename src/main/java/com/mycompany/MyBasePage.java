@@ -53,6 +53,7 @@ public abstract class MyBasePage extends WebPage
     private Form myForm;
     private static final String LINKS_LABEL = "linksLabel";
     private String linksLabel = "Authorized Links";
+    protected String customerNumber;
 
 
     /**
@@ -179,9 +180,9 @@ public abstract class MyBasePage extends WebPage
                 @Override
                 protected void onSubmit( AjaxRequestTarget target, Form<?> form )
                 {
-                    String szConsraint = (String)constraintTextField.getDefaultModelObject();
-                    logIt( target, "activate constraint: " + szConsraint);
-                    reinitializeSession( this, accessMgr, szConsraint);
+                    customerNumber = (String)constraintTextField.getDefaultModelObject();
+                    logIt( target, "activate constraint: " + customerNumber);
+                    reinitializeSession( this, accessMgr, customerNumber);
                     setMyResponsePage();
                     target.add( form );
 
@@ -215,13 +216,13 @@ public abstract class MyBasePage extends WebPage
                 switch ( childPage )
                 {
                     case PAGE1:
-                        setResponsePage( new Page1() );
+                        setResponsePage( new Page1(customerNumber) );
                         break;
                     case PAGE2:
-                        setResponsePage( new Page2() );
+                        setResponsePage( new Page2(customerNumber) );
                         break;
                     case PAGE3:
-                        setResponsePage( new Page3() );
+                        setResponsePage( new Page3(customerNumber) );
                         break;
                 }
             }

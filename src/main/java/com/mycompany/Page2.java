@@ -16,6 +16,7 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.Model;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -31,9 +32,23 @@ public class Page2 extends MyBasePage
     private static final Logger LOG = Logger.getLogger( Page2.class.getName() );
     private Form editForm;
 
+    private String activatedCustomer;
+
     public Page2()
     {
-        this.editForm = new Page2Form( "pageForm", new CompoundPropertyModel<Page2EO>( new Page2EO() ) );
+        this.activatedCustomer = "";
+        init();
+    }
+
+    public Page2(String activatedCustomer)
+    {
+        this.activatedCustomer = activatedCustomer;
+        init();
+    }
+
+    private void init()
+    {
+        this.editForm = new Page2Form( "pageForm", new CompoundPropertyModel<>( new Page2EO() ) );
         this.editForm.setOutputMarkupId( true );
         add( this.editForm );
         setChildPage( ChildPage.PAGE2 );
@@ -217,10 +232,9 @@ public class Page2 extends MyBasePage
 
         private void addDetailFields()
         {
-            customer = new TextField( "customer" );
+            customer = new TextField( "customer", Model.of( activatedCustomer ) );
             add( customer );
-            customer.setRequired( true );
-
+            customer.setEnabled( false );
             TextField attr_d = new TextField( "attr_d" );
             add( attr_d );
             attr_d.setRequired( false );
