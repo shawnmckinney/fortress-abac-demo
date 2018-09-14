@@ -21,7 +21,7 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/shawnmckinney/apache-fortress-demo.git</url>
+        <url>https://github.com/shawnmckinney/fortress-abac-demo.git</url>
     </scm>
 
     <developers>

@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 
 
 /**
- * Example Page class for apache-fortress-demo Wicket sample project.  It contains security control functions to demonstrate ANSI RBAC security concepts.
+ * Example Page class for fortress-abac-demo Wicket sample project.  It contains security control functions to demonstrate ANSI RBAC security concepts.
  *
  * @author Shawn McKinney
  * @version $Rev$
