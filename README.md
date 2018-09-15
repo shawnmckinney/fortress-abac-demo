@@ -349,8 +349,8 @@ To gain full understanding, check out the file used to load it into the LDAP dir
   RoleConstraint constraint = new RoleConstraint( );
 
   // In practice we're not gonna pass hard-coded key-values in here, but you get the idea:
-  constraint.setKey( "locale" );
-  constraint.setValue( "north" );
+  constraint.setKey( "customer" );
+  constraint.setValue( "123" );
 
   // This is just boilerplate goop:
   List<RoleConstraint> constraints = new ArrayList();
