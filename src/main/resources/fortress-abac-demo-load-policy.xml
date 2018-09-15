@@ -136,86 +136,86 @@
 
 
             <adduserrole>
-                <!-- Superuser access to all pages, all data, no DSD constraints -->
-                <userrole userId="superuser" name="ROLE_ABAC_SUPER_USER" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- Superuser access to all pages, no constraints -->
+                <userrole userId="superuser" name="ROLE_ABAC_SUPER_USER" />
 
-                <!-- Poweruser access to all pages, all date, with DSD constraints -->
-                <userrole userId="poweruser" name="FORTRESS_ABAC_DEMO_ALL_PAGES" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="poweruser" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="poweruser" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="poweruser" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- Poweruser access to all pages with constraints -->
+                <userrole userId="poweruser" name="FORTRESS_ABAC_DEMO_ALL_PAGES" />
+                <userrole userId="poweruser" name="ABAC_PAGE1" />
+                <userrole userId="poweruser" name="ABAC_PAGE2" />
+                <userrole userId="poweruser" name="ABAC_PAGE3" />
 
-                <!-- User1 Access to all Customers ABAC_PAGE1 only, with DSD constraints -->
-                <userrole userId="user1" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user1" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- User1 Access to all Customers ABAC_PAGE1 only -->
+                <userrole userId="user1" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="user1" name="ABAC_PAGE1" />
 
                 <!-- User1_123 Access to Page 1, Customer 123 only -->
-                <userrole userId="user1_123" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user1_123" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user1_123" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="user1_123" name="ABAC_PAGE1" />
 
                 <!-- User1_456 Access to Page 1, Customer 456 only -->
-                <userrole userId="user1_456" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user1_456" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user1_456" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="user1_456" name="ABAC_PAGE1" />
 
                 <!-- User1_789 Access to Page 1, Customer 789 only -->
-                <userrole userId="user1_789" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user1_789" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user1_789" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="user1_789" name="ABAC_PAGE1" />
 
-                <!-- User2 Access to all Customers Page2 only, with DSD constraints -->
-                <userrole userId="user2" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user2" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- User2 Access to all Customers Page2 only -->
+                <userrole userId="user2" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="user2" name="ABAC_PAGE2" />
 
                 <!-- User2_123 Access to Page 2, Customer 123 only -->
-                <userrole userId="user2_123" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user2_123" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user2_123" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="user2_123" name="ABAC_PAGE2" />
 
                 <!-- User2_456 Access to Page 2, Customer 456 only -->
-                <userrole userId="user2_456" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user2_456" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user2_456" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="user2_456" name="ABAC_PAGE2" />
 
                 <!-- User2_789 Access to Page 2, Customer 789 only -->
-                <userrole userId="user2_789" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user2_789" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user2_789" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="user2_789" name="ABAC_PAGE2" />
 
-                <!-- User3 Access to all Customers Page3 only, with DSD constraints -->
-                <userrole userId="user3" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user3" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- User3 Access to all Customers Page3 only -->
+                <userrole userId="user3" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="user3" name="ABAC_PAGE3" />
 
                 <!-- User3_123 Access to Page 3, Customer 123 only -->
-                <userrole userId="user3_123" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user3_123" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user3_123" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="user3_123" name="ABAC_PAGE3" />
 
                 <!-- User3_456 Access to Page 3, Customer 456 only -->
-                <userrole userId="user3_456" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user3_456" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user3_456" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="user3_456" name="ABAC_PAGE3" />
 
                 <!-- User3_789 Access to Page 3, Customer 789 only -->
-                <userrole userId="user3_789" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user3_789" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <userrole userId="user3_789" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="user3_789" name="ABAC_PAGE3" />
 
-                <!-- User123 Access to all pages, Customer 123 only, with DSD constraints -->
-                <userrole userId="user123" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user123" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user123" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user123" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user123" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user123" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- User123 Access to all pages, Customer 123 only -->
+                <userrole userId="user123" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="user123" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="user123" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="user123" name="ABAC_PAGE1" />
+                <userrole userId="user123" name="ABAC_PAGE2" />
+                <userrole userId="user123" name="ABAC_PAGE3" />
 
-                <!-- User456 Access to all pages, Customer 456 only, with DSD constraints -->
-                <userrole userId="user456" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user456" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user456" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user456" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user456" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user456" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- User456 Access to all pages, Customer 456 only -->
+                <userrole userId="user456" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="user456" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="user456" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="user456" name="ABAC_PAGE1" />
+                <userrole userId="user456" name="ABAC_PAGE2" />
+                <userrole userId="user456" name="ABAC_PAGE3" />
 
-                <!-- User789 Access to all pages, Customer 789 only, with DSD constraints -->
-                <userrole userId="user789" name="ROLE_ABAC_DEMO_P1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user789" name="ROLE_ABAC_DEMO_P2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user789" name="ROLE_ABAC_DEMO_P3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user789" name="ABAC_PAGE1" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user789" name="ABAC_PAGE2" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
-                <userrole userId="user789" name="ABAC_PAGE3" beginTime="0000" endTime="0000" beginDate="none" endDate="none" beginLockDate="none" endLockDate="none" dayMask="all" timeout="0"/>
+                <!-- User789 Access to all pages, Customer 789 only -->
+                <userrole userId="user789" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="user789" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="user789" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="user789" name="ABAC_PAGE1" />
+                <userrole userId="user789" name="ABAC_PAGE2" />
+                <userrole userId="user789" name="ABAC_PAGE3" />
             </adduserrole>
 
             <delrole>
