@@ -76,7 +76,7 @@
                 <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
                 <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
 
-                <!-- User1 Access to all Customers Page1 only, with DSD constraints -->
+                <!-- User1 Access to all Customers Page1 only -->
                 <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
                 <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
                 <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
@@ -90,7 +90,7 @@
                 <!-- User1_789 Access to Page 1, Customer 789 only -->
                 <roleconstraint userId="User1_789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
 
-                <!-- User2 Access to all Customers Page2 only, with DSD constraints -->
+                <!-- User2 Access to all Customers Page2 only -->
                 <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
                 <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
                 <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
@@ -104,7 +104,7 @@
                 <!-- User2_789 Access to Page 2, Customer 789 only -->
                 <roleconstraint userId="User2_789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
 
-                <!-- User3 Access to all Customers Page3 only, with DSD constraints -->
+                <!-- User3 Access to all Customers Page3 only -->
                 <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
                 <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
                 <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
@@ -118,17 +118,17 @@
                 <!-- User3_789 Access to Page 3, Customer 789 only -->
                 <roleconstraint userId="User3_789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
 
-                <!-- User123 Access to all pages, Customer 123 only, with DSD constraints -->
+                <!-- User123 Access to all pages, Customer 123 only -->
                 <roleconstraint userId="User123" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
                 <roleconstraint userId="User123" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
                 <roleconstraint userId="User123" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
 
-                <!-- User456 Access to all pages, Customer 456 only, with DSD constraints -->
+                <!-- User456 Access to all pages, Customer 456 only -->
                 <roleconstraint userId="User456" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
                 <roleconstraint userId="User456" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
                 <roleconstraint userId="User456" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
 
-                <!-- User789 Access to all pages, Customer 789 only, with DSD constraints -->
+                <!-- User789 Access to all pages, Customer 789 only -->
                 <roleconstraint userId="User789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
                 <roleconstraint userId="User789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
                 <roleconstraint userId="User789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
