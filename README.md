@@ -228,7 +228,7 @@ This sample web app uses Java EE security.
 -------------------------------------------------------------------------------
 ## SECTION VI. Understand the security policy
 
-To gain full understanding, check out the file used to load it into the LDAP directory: [fortress-abac-sample security policy](src/main/resources/fortress-demo-load-policy.xml).
+To gain full understanding, check out the file used to load it into the LDAP directory: [fortress-abac-sample security policy](src/main/resources/fortress-abac-demo-load-policy.xml).
 
 #### 1. User-to-Role Assignment Table
 
