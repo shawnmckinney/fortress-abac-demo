@@ -46,8 +46,6 @@ public abstract class MyBasePage extends WebPage
     @SpringBean
     protected AccessMgr accessMgr;
     @SpringBean
-    private ReviewMgr reviewMgr;
-    @SpringBean
     private J2eePolicyMgr j2eePolicyMgr;
     private static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
     private Form myForm;
@@ -124,7 +122,7 @@ public abstract class MyBasePage extends WebPage
     public class MyBasePageForm extends Form
     {
         private TextField constraintTextField;
-        private String custNum;
+        private String custA;
 
 
         public MyBasePageForm( String id )
@@ -166,13 +164,11 @@ public abstract class MyBasePage extends WebPage
         }
 
 
-
         private void addButton()
         {
             constraintTextField = new TextField( "custNum", Model.of( "" ));
             add( constraintTextField );
             constraintTextField.setRequired( true );
-
             add( new SecureIndicatingAjaxButton( this, GlobalIds.ROLES_ACTIVATE, "com.mycompany.MyBasePage", "activateConstraint" )
             {
                 private static final long serialVersionUID = 1L;

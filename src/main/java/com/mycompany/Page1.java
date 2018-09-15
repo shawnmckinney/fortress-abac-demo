@@ -77,7 +77,6 @@ public class Page1 extends MyBasePage
                 {
                     Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_1_ADD );
-                    //if( page1EO != null && checkAccess(page1EO.getCustomer()) )
                     if( page1EO != null && checkAccess() )
                     {
                         logIt( target, "Page1 Add for Customer " + page1EO.getCustomer() );

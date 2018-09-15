@@ -79,7 +79,7 @@ public class Page2 extends MyBasePage
                 {
                     Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_2_ADD );
-                    if( page2EO != null && checkAccess( page2EO.getCustomer() ) )
+                    if( page2EO != null && checkAccess( ) )
                     {
                         logIt( target, "Page2 Add for Customer " + page2EO.getCustomer() );
                     }
@@ -119,7 +119,7 @@ public class Page2 extends MyBasePage
                 {
                     Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_2_UPDATE );
-                    if( page2EO != null && checkAccess( page2EO.getCustomer() ) )
+                    if( page2EO != null && checkAccess( ) )
                     {
                         logIt( target, "Page2 Update for Customer " + page2EO.getCustomer() );
                     }
@@ -158,7 +158,7 @@ public class Page2 extends MyBasePage
                 {
                     Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_2_DELETE );
-                    if( page2EO != null && checkAccess( page2EO.getCustomer() ) )
+                    if( page2EO != null && checkAccess( ) )
                     {
                         logIt( target, "Page2 Delete for Customer " + page2EO.getCustomer() );
                     }

@@ -23,10 +23,6 @@
           factory-method="createInstance">
         <constructor-arg value="HOME"/>
     </bean>
-    <bean id="reviewMgr" class="org.apache.directory.fortress.core.ReviewMgrFactory" scope="prototype"
-          factory-method="createInstance">
-        <constructor-arg value="HOME"/>
-    </bean>
     <!-- The Fortress Realm J2EE Manager bean used for deserializing the principal as returned from tomcat -->
     <bean id="j2eePolicyMgr" class="org.apache.directory.fortress.realm.J2eePolicyMgrFactory" scope="prototype"
           factory-method="createInstance">

@@ -78,7 +78,7 @@ public class Page3 extends MyBasePage
                 {
                     Page3EO page3EO = ( Page3EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_3_ADD );
-                    if( page3EO != null && checkAccess( page3EO.getCustomer() ) )
+                    if( page3EO != null && checkAccess( ) )
                     {
                         logIt( target, "Page3 Add for Customer " + page3EO.getCustomer() );
                     }
@@ -118,7 +118,7 @@ public class Page3 extends MyBasePage
                 {
                     Page3EO page3EO = ( Page3EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_3_UPDATE );
-                    if( page3EO != null && checkAccess( page3EO.getCustomer() ) )
+                    if( page3EO != null && checkAccess( ) )
                     {
                         logIt( target, "Page3 Update for Customer " + page3EO.getCustomer() );
                     }
@@ -157,7 +157,7 @@ public class Page3 extends MyBasePage
                 {
                     Page3EO page3EO = ( Page3EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_3_DELETE );
-                    if( page3EO != null && checkAccess( page3EO.getCustomer() ) )
+                    if( page3EO != null && checkAccess( ) )
                     {
                         logIt( target, "Page3 Delete for Customer " + page3EO.getCustomer() );
                     }

@@ -345,13 +345,17 @@
 
             </addpermop>
 
+<!--
             <delsdset>
                 <sdset name="Demo2DSD" setType="DYNAMIC"/>
             </delsdset>
+-->
 
+<!--
             <addsdset>
                 <sdset name="Demo2DSD" description="ROLE_TEST DATA roles are mutually exclusive" cardinality="2" setType="DYNAMIC" setmembers="ABAC_PAGE1,ABAC_PAGE2,ABAC_PAGE3"/>
             </addsdset>
+-->
 
             <delorgunit>
                 <orgunit name="Demo2Perms" typeName="PERM"/>
