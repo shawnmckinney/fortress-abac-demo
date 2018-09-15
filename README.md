@@ -184,7 +184,7 @@ This sample web app uses Java EE security.
   ```
 
  Build Notes:
- * `-Dload.file` automatically loads the [fortress-abac-sample security policy](src/main/resources/fortress-abac-sample-security-policy.xml) data into ldap.
+ * `-Dload.file` automatically loads the [fortress-abac-demo-load-policy.xml](src/main/resources/fortress-abac-demo-load-policy.xml) data into ldap.
  * This load needs to happen just once for the default test cases to work and may be dropped from future `mvn` commands.
 
 #### 3. Deploy the sample to Tomcat:
