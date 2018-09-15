@@ -132,7 +132,6 @@
                 <roleconstraint userId="User789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
                 <roleconstraint userId="User789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
                 <roleconstraint userId="User789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
-
             </addroleconstraint>
 
 
@@ -261,39 +260,38 @@
                 <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P2"/>
                 <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P3"/>
 
-                <permgrant objName="com.mycompany.Page1" opName="Add"                roleNm="ABAC_PAGE1"/>
-                <permgrant objName="com.mycompany.Page1" opName="Update"             roleNm="ABAC_PAGE1" />
-                <permgrant objName="com.mycompany.Page1" opName="Delete"             roleNm="ABAC_PAGE1"/>
-                <permgrant objName="com.mycompany.Page1" opName="Search"             roleNm="ABAC_PAGE1"/>
-                <permgrant objName="com.mycompany.Page1" opName="Read"               roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.mycompany.Page1" opName="Add"      roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.mycompany.Page1" opName="Update"   roleNm="ABAC_PAGE1" />
+                <permgrant objName="com.mycompany.Page1" opName="Delete"   roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.mycompany.Page1" opName="Search"   roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.mycompany.Page1" opName="Read"     roleNm="ABAC_PAGE1"/>
 
-                <permgrant objName="com.mycompany.Page2" opName="Add"                roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Update"             roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Delete"             roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Search"             roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Read"               roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Add"      roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Update"   roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Delete"   roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Search"   roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.mycompany.Page2" opName="Read"     roleNm="ABAC_PAGE2"/>
 
-                <permgrant objName="com.mycompany.Page3" opName="Add"                roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Update"             roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Delete"             roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Search"             roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Read"               roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Add"      roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Update"   roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Delete"   roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Search"   roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.mycompany.Page3" opName="Read"     roleNm="ABAC_PAGE3"/>
 
-                <permgrant objName="com.mycompany.Page1" opName="Add"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Update"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Delete"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Search"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Read"               roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Add"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Update"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Delete"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Search"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Add"                roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Update"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Delete"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Search"             roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Read"               roleNm="ROLE_ABAC_SUPER_USER"/>
-
+                <permgrant objName="com.mycompany.Page1" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page1" opName="Read"     roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page2" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.mycompany.Page3" opName="Read"     roleNm="ROLE_ABAC_SUPER_USER"/>
             </addpermgrant>
 
             <delpermobj>
@@ -325,37 +323,24 @@
                 <permop objName="ROLE_ABAC_DEMO_P3" opName="activateConstraint" type="Button" description="Permission for ROLE_ABAC_DEMO_P3.activateConstraint"/>
                 <permop objName="org.apache.directory.fortress.core.rbac.AccessMgrImpl" opName="activateConstraint" type="Button" description="Permission for AccessMgrImpl.activateConstraint"/>
 
-                <permop objName="com.mycompany.Page1" opName="Add"                description="Permission for page1.add"/>
-                <permop objName="com.mycompany.Page1" opName="Update"             description="Permission for page1.update"/>
-                <permop objName="com.mycompany.Page1" opName="Delete"             description="Permission for page1.delete on Customer record 789"/>
-                <permop objName="com.mycompany.Page1" opName="Search"             description="Permission for page1.search"/>
-                <permop objName="com.mycompany.Page1" opName="Read"               description="Permission for page1.read"/>
+                <permop objName="com.mycompany.Page1" opName="Add"      description="Permission for page1.add"/>
+                <permop objName="com.mycompany.Page1" opName="Update"   description="Permission for page1.update"/>
+                <permop objName="com.mycompany.Page1" opName="Delete"   description="Permission for page1.delete on Customer record 789"/>
+                <permop objName="com.mycompany.Page1" opName="Search"   description="Permission for page1.search"/>
+                <permop objName="com.mycompany.Page1" opName="Read"     description="Permission for page1.read"/>
 
-                <permop objName="com.mycompany.Page2" opName="Add"                description="Permission for page2.add"/>
-                <permop objName="com.mycompany.Page2" opName="Update"             description="Permission for page1.update"/>
-                <permop objName="com.mycompany.Page2" opName="Delete"             description="Permission for page2.delete"/>
-                <permop objName="com.mycompany.Page2" opName="Search"             description="Permission for page2.search"/>
-                <permop objName="com.mycompany.Page2" opName="Read"               description="Permission for page2.read"/>
+                <permop objName="com.mycompany.Page2" opName="Add"      description="Permission for page2.add"/>
+                <permop objName="com.mycompany.Page2" opName="Update"   description="Permission for page1.update"/>
+                <permop objName="com.mycompany.Page2" opName="Delete"   description="Permission for page2.delete"/>
+                <permop objName="com.mycompany.Page2" opName="Search"   description="Permission for page2.search"/>
+                <permop objName="com.mycompany.Page2" opName="Read"     description="Permission for page2.read"/>
 
-                <permop objName="com.mycompany.Page3" opName="Add"                description="Permission for page3.add"/>
-                <permop objName="com.mycompany.Page3" opName="Update"             description="Permission for page3.update"/>
-                <permop objName="com.mycompany.Page3" opName="Delete"             description="Permission for page3.delete"/>
-                <permop objName="com.mycompany.Page3" opName="Search"             description="Permission for page3.search"/>
-                <permop objName="com.mycompany.Page3" opName="Read"               description="Permission for page3.read"/>
-
+                <permop objName="com.mycompany.Page3" opName="Add"      description="Permission for page3.add"/>
+                <permop objName="com.mycompany.Page3" opName="Update"   description="Permission for page3.update"/>
+                <permop objName="com.mycompany.Page3" opName="Delete"   description="Permission for page3.delete"/>
+                <permop objName="com.mycompany.Page3" opName="Search"   description="Permission for page3.search"/>
+                <permop objName="com.mycompany.Page3" opName="Read"     description="Permission for page3.read"/>
             </addpermop>
-
-<!--
-            <delsdset>
-                <sdset name="Demo2DSD" setType="DYNAMIC"/>
-            </delsdset>
--->
-
-<!--
-            <addsdset>
-                <sdset name="Demo2DSD" description="ROLE_TEST DATA roles are mutually exclusive" cardinality="2" setType="DYNAMIC" setmembers="ABAC_PAGE1,ABAC_PAGE2,ABAC_PAGE3"/>
-            </addsdset>
--->
 
             <delorgunit>
                 <orgunit name="Demo2Perms" typeName="PERM"/>
