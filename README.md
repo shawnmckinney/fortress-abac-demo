@@ -8,12 +8,12 @@
 ## Table of Contents
  * SECTION 1. Prerequisites
  * SECTION 2. Prepare Tomcat for Java EE Security
- * SECTION 3. Prepare fortress-abac-sample package
+ * SECTION 3. Prepare package
  * SECTION 4. Prepare Tomcat for Java EE Security
- * SECTION 5. Build and deploy fortress-abac-sample
+ * SECTION 5. Build and deploy sample
  * SECTION 6. Understand the security policy
- * SECTION 7. Manually Test the RBAC with ABAC sample
- * SECTION 8. Automatically Test the RBAC with ABAC sample (using Selenium)
+ * SECTION 7. Manually Test the sample
+ * SECTION 8. Automatically Test the sample (using Selenium)
  * SECTION 9. Under the Hood (Learn how it works here)
 
 -------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ This sample web app uses Java EE security.
 #### 4. Restart tomcat for new settings to take effect.
 
 -------------------------------------------------------------------------------
-## SECTION III. Prepare fortress-abac-sample package
+## SECTION III. Prepare package
 
 #### 1. Stage the project.
 
@@ -167,7 +167,7 @@ This sample web app uses Java EE security.
  related to web hosting and multitenancy.
 
 -------------------------------------------------------------------------------
-## SECTION V. Build and deploy fortress-abac-sample
+## SECTION V. Build and deploy sample
 
 #### 1. Verify the java and maven home env variables are set.
 
@@ -279,7 +279,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 | user3_789  |             |             | 789         |
 
 
-## SECTION VII. Manually Test the RBAC with ABAC sample
+## SECTION VII. Manually Test the sample
 
 #### 1. Open link to [http://localhost:8080/fortress-abac-sample](http://localhost:8080/fortress-abac-sample)
 
@@ -318,7 +318,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  Each has different access rights to application based on their constraints.
 
-## SECTION VII. Automatically Test the RBAC with ABAC sample
+## SECTION VII. Automatically Test the sample
 
  * Work-in-progress....
 
