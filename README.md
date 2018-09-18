@@ -63,7 +63,7 @@ This sample web app uses Java EE security.
  a. Download and extract from Github:
 
  ```bash
- wget https://github.com/shawnmckinney/fortress-abac-sample/archive/master.zip
+ wget https://github.com/shawnmckinney/fortress-abac-demo/archive/master.zip
  ```
 
  -- Or --
@@ -71,13 +71,13 @@ This sample web app uses Java EE security.
  b. Or `git clone` locally:
 
  ```git
- git clone https://github.com/shawnmckinney/fortress-abac-sample.git
+ git clone https://github.com/shawnmckinney/fortress-abac-demo.git
  ```
 
 #### 2. Change directory into it:
 
  ```bash
- cd fortress-abac-sample
+ cd fortress-abac-demo
  ```
 
 #### 3. Enable an LDAP server:
