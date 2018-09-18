@@ -358,13 +358,13 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
   try
   {
-      // Now, create the RBAC session with an ABAC constraint, locale=north, asserted:
+      // Now, create the RBAC session with an ABAC constraint, customer=123, asserted:
       Session session = accessMgr.createSession( user, constraints );
       ...
   }
  ```
 
- Pushing the **locale** attribute into the User's RBAC session the runtime will match that instance data with their stored policy.
+ Pushing the **customer** attribute into the User's RBAC session the runtime will match that instance data with their stored policy.
 
  ![Image4](images/user123.png "View user123 data")
 
