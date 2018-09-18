@@ -1,4 +1,4 @@
-# Overview of the fortress-abac-sample README
+# Overview of the fortress-abac-demo README
 
  * This document demonstrates how to build and deploy the fortress abac sample.
  * The intent is to demonstrate using attributes to control role activation within an Apache Wicket Web app.
@@ -40,13 +40,13 @@ This sample web app uses Java EE security.
 
  Note: The realm proxy enables Tomcat container-managed security functions to call back to fortress.
 
-#### 2. Optional - Prepare tomcat to allow autodeploy of fortress-abac-sample web app:
+#### 2. Optional - Prepare tomcat to allow autodeploy of fortress-abac-demo web app:
 
  ```bash
  sudo vi /usr/local/tomcat8/conf/tomcat-users.xml
  ```
 
-#### 3. Optional - Add tomcat user to deploy fortress-abac-sample:
+#### 3. Optional - Add tomcat user to deploy fortress-abac-demo:
 
  ```xml
  <role rolename="manager-script"/>
@@ -145,7 +145,7 @@ This sample web app uses Java EE security.
 
   where *TOMCAT_HOME* matches your target env.
 
-#### 2. Prepare tomcat to allow autodeploy of fortress-abac-sample web app:
+#### 2. Prepare tomcat to allow autodeploy of fortress-abac-demo web app:
 
  ```
  sudo vi /usr/local/tomcat8/conf/tomcat-users.xml
@@ -220,7 +220,7 @@ This sample web app uses Java EE security.
  d. To manually deploy app to Tomcat:
 
  ```bash
- cp target/fortress-abac-sample.war $TOMCAT_HOME/webapps
+ cp target/fortress-abac-demo.war $TOMCAT_HOME/webapps
  ```
 
  * Where `$TOMCAT_HOME` points to the execution env.
@@ -281,7 +281,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
 ## SECTION VII. Manually Test the sample
 
-#### 1. Open link to [http://localhost:8080/fortress-abac-sample](http://localhost:8080/fortress-abac-sample)
+#### 1. Open link to [http://localhost:8080/fortress-abac-demo](http://localhost:8080/fortress-abac-demo)
 
 #### 2. Login with Java EE authentication form:
 
@@ -290,6 +290,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
  Password = 'password' for all:
 
  | userId        | Password      |
+ | ------------- | ------------- |
  | ------------- | ------------- |
  | user1         | password      |
  | user1_123     | password      |
