@@ -81,11 +81,11 @@ public class Page2 extends MyBasePage
                     info( GlobalIds.BTN_PAGE_2_ADD );
                     if( page2EO != null && checkAccess( ) )
                     {
-                        logIt( target, "Page2 Add for Customer " + page2EO.getCustomer() );
+                        logIt( target, "Page2 Add for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.ADD, page2EO.getCustomer() );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.ADD, activatedCustomer );
                     }
                 }
 
@@ -121,11 +121,11 @@ public class Page2 extends MyBasePage
                     info( GlobalIds.BTN_PAGE_2_UPDATE );
                     if( page2EO != null && checkAccess( ) )
                     {
-                        logIt( target, "Page2 Update for Customer " + page2EO.getCustomer() );
+                        logIt( target, "Page2 Update for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.UPDATE, page2EO.getCustomer() );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.UPDATE, activatedCustomer );
                     }
                 }
 
@@ -160,11 +160,11 @@ public class Page2 extends MyBasePage
                     info( GlobalIds.BTN_PAGE_2_DELETE );
                     if( page2EO != null && checkAccess( ) )
                     {
-                        logIt( target, "Page2 Delete for Customer " + page2EO.getCustomer() );
+                        logIt( target, "Page2 Delete for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.DELETE, page2EO.getCustomer() );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.DELETE, activatedCustomer );
                     }
                 }
 
@@ -196,13 +196,13 @@ public class Page2 extends MyBasePage
                 protected void onSubmit( AjaxRequestTarget target, Form form )
                 {
                     Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
-                    if( page2EO != null && checkAccess( page2EO.getCustomer() ) )
+                    if( page2EO != null && checkAccess( ) )
                     {
-                        logIt( target, "Page2 Search for Customer " + page2EO.getCustomer() );
+                        logIt( target, "Page2 Search for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.SEARCH, page2EO.getCustomer() );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.SEARCH, activatedCustomer );
                     }
                 }
 
