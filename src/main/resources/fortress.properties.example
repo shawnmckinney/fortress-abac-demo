@@ -2,25 +2,20 @@
 # This is free and unencumbered software released into the public domain.
 #
 
+# ldap host name
+host=localhost
+
+# If ApacheDS:
 # This param tells fortress what type of ldap server in use:
 ldap.server.type=apacheds
-
-# Use value from [Set Hostname Entry]:
-host=fortressdemo2.com
-
-# if ApacheDS is listening on TLS port:
-port=10636
-
-# These credentials are used for read/write access to all nodes under suffix:
+port=10389
 admin.user=uid=admin,ou=system
 admin.pw=secret
 
-# Use truststore when connecting over ldaps:
-trust.store=mytruststore
-trust.store.password=changeit
-
-# Set to false and mytruststore will be found on the filepath of the machine:
-trust.store.onclasspath=true
+# if OpenLDAP
+#ldap.server.type=openldap
+#port=389
+#admin.user=cn=manager,dc=example,dc=com
 
 # This is min/max settings for LDAP administrator pool connections that have read/write access to all nodes under suffix:
 min.admin.conn=1
@@ -41,7 +36,6 @@ enable.pool.reconnect=true
 
 # Used to connect APIS with Fortress-Rest instead of LDAPv3:
 #enable.mgr.impl.rest=true
-
 # This user account is added automatically during deployment of fortress-rest via -Dload.file=./src/main/resources/FortressRestServerPolicy.xml:
 #http.user=demouser4
 #http.pw=password
