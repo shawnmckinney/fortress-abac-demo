@@ -26,10 +26,6 @@ trust.store.onclasspath=true
 min.admin.conn=1
 max.admin.conn=10
 
-# Used for SSL Connection to LDAP Server:
-enable.ldap.ssl=true
-enable.ldap.ssl.debug=false
-
 # This node contains fortress properties stored on behalf of connecting LDAP clients:
 config.realm=DEFAULT
 config.root=ou=Config,dc=example,dc=com
