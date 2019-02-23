@@ -11,7 +11,7 @@
     <version>2.0.3</version>
     <packaging>war</packaging>
     <name>Fortress ABAC Demo</name>
-    <description>Sample Web App using Apache Fortress, Wicket, Mybatis Data Persistence Frameworks.</description>
+    <description>Sample Web App demonstrating attribute-based role constraints using Apache Fortress, Wicket, Mybatis Data Persistence Frameworks.</description>
     <licenses>
         <license>
             <name>Unlicense</name>
