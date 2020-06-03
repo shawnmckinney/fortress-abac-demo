@@ -9,18 +9,17 @@
  * SECTION 1. Prerequisites
  * SECTION 2. Prepare Tomcat for Java EE Security
  * SECTION 3. Prepare package
- * SECTION 4. Prepare Tomcat for Java EE Security
- * SECTION 5. Build and deploy sample
- * SECTION 6. Understand the security policy
- * SECTION 7. Manually Test the sample
- * SECTION 8. Automatically Test the sample (using Selenium)
- * SECTION 9. Under the Hood (Learn how it works here)
+ * SECTION 4. Build and deploy sample
+ * SECTION 5. Understand the security policy
+ * SECTION 6. Manually Test the sample
+ * SECTION 7. Automatically Test the sample (using Selenium)
+ * SECTION 8. Under the Hood (Learn how it works here)
 
 -------------------------------------------------------------------------------
 ## SECTION I. Prerequisites
 1. Java 8
 2. Apache Maven 3++
-3. Apache Tomcat 7++
+3. Apache Tomcat 8++
 4. Basic LDAP server setup by completing either Quickstart
     * [OpenLDAP & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-SLAPD.md)
     * [APACHEDS & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-APACHEDS.md)
@@ -33,7 +32,7 @@ This sample web app uses Java EE security.
 #### 1. Download the fortress realm proxy jar into tomcat/lib folder:
 
   ```bash
-  wget http://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.2/fortress-realm-proxy-2.0.2.jar -P $TOMCAT_HOME/lib
+  wget https://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.5/fortress-realm-proxy-2.0.5.jar -P $TOMCAT_HOME/lib
   ```
 
  * Where `$TOMCAT_HOME` points to the execution env.
@@ -54,6 +53,11 @@ This sample web app uses Java EE security.
  ```
 
 #### 4. Restart tomcat for new settings to take effect.
+
+ Note: The proxy is a shim that uses a [URLClassLoader](http://docs.oracle.com/javase/7/docs/api/java/net/URLClassLoader.html) to reach its implementation libs.  It prevents
+ the realm impl libs, pulled in as dependency to web app, from interfering with the container’s system classpath thus providing an error free deployment process free from
+ classloader issues.  The proxy offers the flexibility for each web app to determine its own version/type of security realm to use, satisfying a variety of requirements
+ related to web hosting and multitenancy.
 
 -------------------------------------------------------------------------------
 ## SECTION III. Prepare package
@@ -133,41 +137,7 @@ This sample web app uses Java EE security.
  ```
 
 -------------------------------------------------------------------------------
-## SECTION IV. Prepare Tomcat for Java EE Security
-
-This sample web app uses Java EE security.
-
-#### 1. Download the fortress realm proxy jar into tomcat/lib folder:
-
-  ```
-  wget http://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.2/fortress-realm-proxy-2.0.2.jar -P $TOMCAT_HOME/lib
-  ```
-
-  where *TOMCAT_HOME* matches your target env.
-
-#### 2. Prepare tomcat to allow autodeploy of fortress-abac-demo web app:
-
- ```
- sudo vi /usr/local/tomcat8/conf/tomcat-users.xml
- ```
-
-#### 3. Add tomcat user to deploy role-engineering-sample:
-
- ```
- <role rolename="manager-script"/>
- <role rolename="manager-gui"/>
- <user username="tcmanager" password="m@nager123" roles="manager-script"/>
- ```
-
-#### 4. Restart tomcat for new settings to take effect.
-
- Note: The proxy is a shim that uses a [URLClassLoader](http://docs.oracle.com/javase/7/docs/api/java/net/URLClassLoader.html) to reach its implementation libs.  It prevents
- the realm impl libs, pulled in as dependency to web app, from interfering with the container’s system classpath thus providing an error free deployment process free from
- classloader issues.  The proxy offers the flexibility for each web app to determine its own version/type of security realm to use, satisfying a variety of requirements
- related to web hosting and multitenancy.
-
--------------------------------------------------------------------------------
-## SECTION V. Build and deploy sample
+## SECTION IV. Build and deploy sample
 
 #### 1. Verify the java and maven home env variables are set.
 
@@ -226,7 +196,7 @@ This sample web app uses Java EE security.
  * Where `$TOMCAT_HOME` points to the execution env.
 
 -------------------------------------------------------------------------------
-## SECTION VI. Understand the security policy
+## SECTION V. Understand the security policy
 
 To gain full understanding, check out the file used to load it into the LDAP directory: [fortress-abac-demo-load-policy.xml](src/main/resources/fortress-abac-demo-load-policy.xml).
 
@@ -279,7 +249,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 | user3_789  |             |             | 789         |
 
 
-## SECTION VII. Manually Test the sample
+## SECTION VI. Manually Test the sample
 
 #### 1. Open link to [http://localhost:8080/fortress-abac-demo](http://localhost:8080/fortress-abac-demo)
 
@@ -326,7 +296,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
  Run the selenium automated test:
 
  ```maven
- mvn test -Dtest=X
+ mvn test -Dtest=ApacheFortressDemoSeleniumITCase
  ```
 
  Selenium Test Notes:

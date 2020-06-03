@@ -174,13 +174,13 @@ public abstract class MyBasePage extends WebPage
                 private static final long serialVersionUID = 1L;
 
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form<?> form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     customerNumber = (String)constraintTextField.getDefaultModelObject();
                     logIt( target, "activate constraint: " + customerNumber);
                     reinitializeSession( this, accessMgr, customerNumber);
                     setMyResponsePage();
-                    target.add( form );
+                    target.add( getForm() );
 
                 }
                 @Override

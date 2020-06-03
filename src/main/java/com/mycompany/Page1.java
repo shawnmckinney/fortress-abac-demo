@@ -73,7 +73,7 @@ public class Page1 extends MyBasePage
             add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_ADD, GlobalIds.PAGE1_OBJNAME, GlobalIds.ADD )
             {
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_1_ADD );
@@ -88,7 +88,7 @@ public class Page1 extends MyBasePage
                 }
 
                 @Override
-                public void onError( AjaxRequestTarget target, Form form )
+                public void onError( AjaxRequestTarget target )
                 {
                     LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_ADD );
                 }
@@ -113,7 +113,7 @@ public class Page1 extends MyBasePage
             add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_UPDATE, GlobalIds.PAGE1_OBJNAME, GlobalIds.UPDATE )
             {
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_1_UPDATE );
@@ -128,7 +128,7 @@ public class Page1 extends MyBasePage
                 }
 
                 @Override
-                public void onError( AjaxRequestTarget target, Form form )
+                public void onError( AjaxRequestTarget target )
                 {
                     LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_UPDATE );
                 }
@@ -152,7 +152,7 @@ public class Page1 extends MyBasePage
             add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_DELETE, GlobalIds.PAGE1_OBJNAME, GlobalIds.DELETE )
             {
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
                     info( GlobalIds.BTN_PAGE_1_DELETE );
@@ -167,7 +167,7 @@ public class Page1 extends MyBasePage
                 }
 
                 @Override
-                public void onError( AjaxRequestTarget target, Form form )
+                public void onError( AjaxRequestTarget target )
                 {
                     LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_DELETE );
                 }
@@ -191,7 +191,7 @@ public class Page1 extends MyBasePage
             add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_SEARCH, GlobalIds.PAGE1_OBJNAME, GlobalIds.SEARCH )
             {
                 @Override
-                protected void onSubmit( AjaxRequestTarget target, Form form )
+                protected void onSubmit( AjaxRequestTarget target )
                 {
                     Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
                     if(page1EO != null && checkAccess())
@@ -205,7 +205,7 @@ public class Page1 extends MyBasePage
                 }
 
                 @Override
-                public void onError( AjaxRequestTarget target, Form form )
+                public void onError( AjaxRequestTarget target )
                 {
                     LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_SEARCH );
                 }
