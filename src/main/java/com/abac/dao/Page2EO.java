@@ -2,24 +2,24 @@
  * This is free and unencumbered software released into the public domain.
  */
 
-package com.mycompany.dao;
+package com.abac.dao;
 
 
 import java.io.Serializable;
 
 /**
- * Example Page3 entity data.
+ * Example Page2 entity data.
  *
  * @author Shawn McKinney
  * @version $Rev$
  */
-public class Page3EO implements Serializable
+public class Page2EO implements Serializable
 {
     private Integer id;
     private String customer;
-    private String attr_g;
-    private String attr_h;
-    private String attr_i;
+    private String attr_d;
+    private String attr_e;
+    private String attr_f;
 
     public String getCustomer()
     {
@@ -31,34 +31,34 @@ public class Page3EO implements Serializable
         this.customer = customer;
     }
 
-    public String getAttr_g()
+    public String getAttr_d()
     {
-        return attr_g;
+        return attr_d;
     }
 
-    public void setAttr_g( String attr_g )
+    public void setAttr_d( String attr_d )
     {
-        this.attr_g = attr_g;
+        this.attr_d = attr_d;
     }
 
-    public String getAttr_h()
+    public String getAttr_e()
     {
-        return attr_h;
+        return attr_e;
     }
 
-    public void setAttr_h( String attr_h )
+    public void setAttr_e( String attr_e )
     {
-        this.attr_h = attr_h;
+        this.attr_e = attr_e;
     }
 
-    public String getAttr_i()
+    public String getAttr_f()
     {
-        return attr_i;
+        return attr_f;
     }
 
-    public void setAttr_i( String attr_i )
+    public void setAttr_f( String attr_f )
     {
-        this.attr_i = attr_i;
+        this.attr_f = attr_f;
     }
 
     public Integer getId()

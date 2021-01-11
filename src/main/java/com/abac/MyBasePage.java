@@ -1,7 +1,7 @@
 /*
  * This is free and unencumbered software released into the public domain.
  */
-package com.mycompany;
+package com.abac;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.directory.fortress.core.*;
@@ -169,7 +169,7 @@ public abstract class MyBasePage extends WebPage
             constraintTextField = new TextField( "custNum", Model.of( "" ));
             add( constraintTextField );
             constraintTextField.setRequired( true );
-            add( new SecureIndicatingAjaxButton( this, GlobalIds.ROLES_ACTIVATE, "com.mycompany.MyBasePage", "activateConstraint" )
+            add( new SecureIndicatingAjaxButton( this, GlobalIds.ROLES_ACTIVATE, "com.abac.MyBasePage", "activateConstraint" )
             {
                 private static final long serialVersionUID = 1L;
 

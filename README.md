@@ -206,24 +206,24 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  For this app, user-to-role assignments are:
 
-| user       | Page1       | Page2    | Page3    |
-| ---------- | ----------- | -------- | -------- |
-| poweruser  | true        | true     | true     |
-| user123    | true        | true     | true     |
-| user456    | true        | true     | true     |
-| user789    | true        | true     | true     |
-| user1      | true        | false    | false    |
-| user1_123  | true        | false    | false    |
-| user1_456  | false       | true     | false    |
-| user1_789  | false       | false    | true     |
-| user2      | false       | true     | false    |
-| user2_123  | true        | false    | false    |
-| user2_456  | false       | true     | false    |
-| user2_789  | false       | false    | true     |
-| user3      | false       | false    | true     |
-| user3_123  | true        | false    | false    |
-| user3_456  | false       | true     | false    |
-| user3_789  | false       | false    | true     |
+| user        | Page1       | Page2    | Page3    |
+| ----------- | ----------- | -------- | -------- |
+| apoweruser  | true        | true     | true     |
+| auser123    | true        | true     | true     |
+| auser456    | true        | true     | true     |
+| auser789    | true        | true     | true     |
+| auser1      | true        | false    | false    |
+| auser1_123  | true        | false    | false    |
+| auser1_456  | false       | true     | false    |
+| auser1_789  | false       | false    | true     |
+| auser2      | false       | true     | false    |
+| auser2_123  | true        | false    | false    |
+| auser2_456  | false       | true     | false    |
+| auser2_789  | false       | false    | true     |
+| auser3      | false       | false    | true     |
+| auser3_123  | true        | false    | false    |
+| auser3_456  | false       | true     | false    |
+| auser3_789  | false       | false    | true     |
 
 
 
@@ -231,24 +231,24 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  But we want to control role activation using attributes based on Customer number:
 
-| user       | Page1       | Page2       | Page3       |
-| ---------- | ----------- | ----------- | ----------- |
-| poweruser  | 123,456,789 | 123,456,789 | 123,456,789 |
-| user123    | 123         | 123         | 123         |
-| user456    | 456         | 456         | 456         |
-| user789    | 789         | 789         | 789         |
-| user1      | 123,456,789 |             |             |
-| user1_123  | 123         |             |             |
-| user1_456  | 456         |             |             |
-| user1_789  | 789         |             |             |
-| user2      |             | 123,456,789 |             |
-| user2_123  |             | 123         |             |
-| user2_456  |             | 456         |             |
-| user2_789  |             | 789         |             |
-| user3      |             |             | 123,456,789 |
-| user3_123  |             |             | 123         |
-| user3_456  |             |             | 456         |
-| user3_789  |             |             | 789         |
+| user        | Page1       | Page2       | Page3       |
+| ----------- | ----------- | ----------- | ----------- |
+| apoweruser  | 123,456,789 | 123,456,789 | 123,456,789 |
+| auser123    | 123         | 123         | 123         |
+| auser456    | 456         | 456         | 456         |
+| auser789    | 789         | 789         | 789         |
+| auser1      | 123,456,789 |             |             |
+| auser1_123  | 123         |             |             |
+| auser1_456  | 456         |             |             |
+| auser1_789  | 789         |             |             |
+| auser2      |             | 123,456,789 |             |
+| auser2_123  |             | 123         |             |
+| auser2_456  |             | 456         |             |
+| auser2_789  |             | 789         |             |
+| auser3      |             |             | 123,456,789 |
+| auser3_123  |             |             | 123         |
+| auser3_456  |             |             | 456         |
+| auser3_789  |             |             | 789         |
 
 
 ## SECTION VI. Manually Test the sample
@@ -261,16 +261,15 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  Password = 'password' for all:
 
- | userId        | Password      |
- | ------------- | ------------- |
- | ------------- | ------------- |
- | user1         | password      |
- | user1_123     | password      |
- | user1_456     | password      |
- | user1_789     | password      |
- | user2         | password      |
- | user3         | password      |
- | ...           | password      |
+ | userId         | Password      |
+ | -------------- | ------------- |
+ | auser1         | password      |
+ | auser1_123     | password      |
+ | auser1_456     | password      |
+ | auser1_789     | password      |
+ | auser2         | password      |
+ | auser3         | password      |
+ | ...            | password      |
 
 
 #### 4. Click on a page link.
@@ -310,7 +309,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  How does this work?  Have a look at some code...
 
- Paraphrased from [MyBasePage.java](src/main/java/com/mycompany/MyBasePage.java):
+ Paraphrased from [MyBasePage.java](src/main/java/com/abac/MyBasePage.java):
 
  Every time a constraint is activated, some code executes like this....
 
@@ -339,7 +338,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  Pushing the **customer** attribute into the User's RBAC session the runtime will match that instance data with their stored policy.
 
- ![Image4](images/user123.png "View user123 data")
+ ![Image4](images/auser123.png "View auser123 data")
 
  *Notice that this user has been assigned Page1, Page2 and Page3 roles, via **ftRA** attribute, and that another attribute, **ftRC**, constrains which customer it can be activated.*
 

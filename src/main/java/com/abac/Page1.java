@@ -1,10 +1,10 @@
 /*
  * This is free and unencumbered software released into the public domain.
  */
-package com.mycompany;
+package com.abac;
 
 
-import com.mycompany.dao.Page2EO;
+import com.abac.dao.Page1EO;
 import org.apache.directory.fortress.web.control.SecureIndicatingAjaxButton;
 import org.apache.log4j.Logger;
 import org.apache.wicket.Component;
@@ -27,20 +27,19 @@ import javax.servlet.http.HttpServletRequest;
  * @author Shawn McKinney
  * @version $Rev$
  */
-public class Page2 extends MyBasePage
+public class Page1 extends MyBasePage
 {
-    private static final Logger LOG = Logger.getLogger( Page2.class.getName() );
+    private static final Logger LOG = Logger.getLogger( Page1.class.getName() );
     private Form editForm;
-
     private String activatedCustomer;
 
-    public Page2()
+    public Page1()
     {
         this.activatedCustomer = "";
         init();
     }
 
-    public Page2(String activatedCustomer)
+    public Page1(String activatedCustomer)
     {
         this.activatedCustomer = activatedCustomer;
         init();
@@ -48,21 +47,21 @@ public class Page2 extends MyBasePage
 
     private void init()
     {
-        this.editForm = new Page2Form( "pageForm", new CompoundPropertyModel<>( new Page2EO() ) );
+        this.editForm = new Page1Form( "pageForm", new CompoundPropertyModel<>( new Page1EO() ) );
         this.editForm.setOutputMarkupId( true );
         add( this.editForm );
-        setChildPage( ChildPage.PAGE2 );
+        setChildPage( ChildPage.PAGE1 );
     }
 
-    public class Page2Form extends Form
+    public class Page1Form extends Form
     {
         private TextField customer;
 
-        public Page2Form( String id, final IModel<Page2EO> model )
+        public Page1Form( String id, final IModel<Page1EO> model )
         {
             super( id, model );
             addDetailFields();
-            add( new Label( "label1", "If you see this page, ROLE_ABAC_SUPER_USER or ROLE_ABAC_DEMO_P2 is activated within your session" ) );
+            add( new Label( "label1", "If you see this page, ROLE_ABAC_SUPER_USER or ROLE_ABAC_DEMO_P1 is activated within your session" ) );
             addButtons();
         }
 
@@ -71,28 +70,27 @@ public class Page2 extends MyBasePage
          */
         private void addButtons()
         {
-            //final String szBtn1 = GlobalUtils.BTN_PAGE_2 + "." + GlobalUtils.ADD;
-            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_2_ADD, GlobalIds.PAGE2_OBJNAME, GlobalIds.ADD )
+            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_ADD, GlobalIds.PAGE1_OBJNAME, GlobalIds.ADD )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target )
                 {
-                    Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
-                    info( GlobalIds.BTN_PAGE_2_ADD );
-                    if( page2EO != null && checkAccess( ) )
+                    Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
+                    info( GlobalIds.BTN_PAGE_1_ADD );
+                    if( page1EO != null && checkAccess() )
                     {
-                        logIt( target, "Page2 Add for Customer " + activatedCustomer );
+                        logIt( target, "Page1 Add for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.ADD, activatedCustomer );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE1_OBJNAME, GlobalIds.ADD, activatedCustomer );
                     }
                 }
 
                 @Override
                 public void onError( AjaxRequestTarget target )
                 {
-                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_2_ADD );
+                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_ADD );
                 }
 
                 @Override
@@ -105,34 +103,34 @@ public class Page2 extends MyBasePage
                         {
                             String szRelocation = GlobalIds.getLocationReplacement( ( HttpServletRequest ) getRequest
                                 ().getContainerRequest() );
-                            LOG.info( "Page2.add Failure Handler, relocation string = " + szRelocation );
+                            LOG.info( "Page1.add Failure Handler, relocation string = " + szRelocation );
                             return szRelocation;
                         }
                     };
                     attributes.getAjaxCallListeners().add( ajaxCallListener );
                 }
             } );
-            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_2_UPDATE, GlobalIds.PAGE2_OBJNAME, GlobalIds.UPDATE )
+            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_UPDATE, GlobalIds.PAGE1_OBJNAME, GlobalIds.UPDATE )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target )
                 {
-                    Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
-                    info( GlobalIds.BTN_PAGE_2_UPDATE );
-                    if( page2EO != null && checkAccess( ) )
+                    Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
+                    info( GlobalIds.BTN_PAGE_1_UPDATE );
+                    if( page1EO != null && checkAccess() )
                     {
-                        logIt( target, "Page2 Update for Customer " + activatedCustomer );
+                        logIt( target, "Page1 Add for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.UPDATE, activatedCustomer );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE1_OBJNAME, GlobalIds.UPDATE, activatedCustomer );
                     }
                 }
 
                 @Override
                 public void onError( AjaxRequestTarget target )
                 {
-                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_2_UPDATE );
+                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_UPDATE );
                 }
 
                 @Override
@@ -144,34 +142,34 @@ public class Page2 extends MyBasePage
                         public CharSequence getFailureHandler( Component component )
                         {
                             String szRelocation = GlobalIds.getLocationReplacement( ( HttpServletRequest ) getRequest().getContainerRequest() );
-                            LOG.info( "Page2.update Failure Handler, relocation string = " + szRelocation );
+                            LOG.info( "Page1.update Failure Handler, relocation string = " + szRelocation );
                             return szRelocation;
                         }
                     };
                     attributes.getAjaxCallListeners().add( ajaxCallListener );
                 }
             } );
-            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_2_DELETE, GlobalIds.PAGE2_OBJNAME, GlobalIds.DELETE )
+            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_DELETE, GlobalIds.PAGE1_OBJNAME, GlobalIds.DELETE )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target )
                 {
-                    Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
-                    info( GlobalIds.BTN_PAGE_2_DELETE );
-                    if( page2EO != null && checkAccess( ) )
+                    Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
+                    info( GlobalIds.BTN_PAGE_1_DELETE );
+                    if( page1EO != null && checkAccess() )
                     {
-                        logIt( target, "Page2 Delete for Customer " + activatedCustomer );
+                        logIt( target, "Page1 Add for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.DELETE, activatedCustomer );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE1_OBJNAME, GlobalIds.DELETE, activatedCustomer );
                     }
                 }
 
                 @Override
                 public void onError( AjaxRequestTarget target )
                 {
-                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_2_DELETE );
+                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_DELETE );
                 }
 
                 @Override
@@ -183,33 +181,33 @@ public class Page2 extends MyBasePage
                         public CharSequence getFailureHandler( Component component )
                         {
                             String szRelocation = GlobalIds.getLocationReplacement( ( HttpServletRequest ) getRequest().getContainerRequest() );
-                            LOG.info( "Page2.delete Failure Handler, relocation string = " + szRelocation );
+                            LOG.info( "Page1.delete Failure Handler, relocation string = " + szRelocation );
                             return szRelocation;
                         }
                     };
                     attributes.getAjaxCallListeners().add( ajaxCallListener );
                 }
             } );
-            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_2_SEARCH, GlobalIds.PAGE2_OBJNAME, GlobalIds.SEARCH )
+            add( new SecureIndicatingAjaxButton( this, GlobalIds.BTN_PAGE_1_SEARCH, GlobalIds.PAGE1_OBJNAME, GlobalIds.SEARCH )
             {
                 @Override
                 protected void onSubmit( AjaxRequestTarget target )
                 {
-                    Page2EO page2EO = ( Page2EO ) editForm.getModel().getObject();
-                    if( page2EO != null && checkAccess( ) )
+                    Page1EO page1EO = ( Page1EO ) editForm.getModel().getObject();
+                    if(page1EO != null && checkAccess())
                     {
-                        logIt( target, "Page2 Search for Customer " + activatedCustomer );
+                        logIt( target, "Page1 Search for Customer " + activatedCustomer );
                     }
                     else
                     {
-                        setAuthZError( "Authorization Failed", GlobalIds.PAGE2_OBJNAME, GlobalIds.SEARCH, activatedCustomer );
+                        setAuthZError( "Authorization Failed", GlobalIds.PAGE1_OBJNAME, GlobalIds.SEARCH, activatedCustomer );
                     }
                 }
 
                 @Override
                 public void onError( AjaxRequestTarget target )
                 {
-                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_2_SEARCH );
+                    LOG.error( "submit failed: " + GlobalIds.BTN_PAGE_1_SEARCH );
                 }
 
                 @Override
@@ -221,7 +219,7 @@ public class Page2 extends MyBasePage
                         public CharSequence getFailureHandler( Component component )
                         {
                             String szRelocation = GlobalIds.getLocationReplacement( ( HttpServletRequest ) getRequest().getContainerRequest() );
-                            LOG.info( "Page2.search Failure Handler, relocation string = " + szRelocation );
+                            LOG.info( "Page1.search Failure Handler, relocation string = " + szRelocation );
                             return szRelocation;
                         }
                     };
@@ -235,17 +233,18 @@ public class Page2 extends MyBasePage
             customer = new TextField( "customer", Model.of( activatedCustomer ) );
             add( customer );
             customer.setEnabled( false );
-            TextField attr_d = new TextField( "attr_d" );
-            add( attr_d );
-            attr_d.setRequired( false );
 
-            TextField attr_e = new TextField( "attr_e" );
-            add( attr_e );
-            attr_e.setRequired( false );
+            TextField attr_a = new TextField( "attr_a" );
+            add( attr_a );
+            attr_a.setRequired( false );
 
-            TextField attr_f = new TextField( "attr_f" );
-            add( attr_f );
-            attr_f.setRequired( false );
+            TextField attr_b = new TextField( "attr_b" );
+            add( attr_b );
+            attr_b.setRequired( false );
+
+            TextField attr_c = new TextField( "attr_c" );
+            add( attr_c );
+            attr_c.setRequired( false );
         }
     }
 }

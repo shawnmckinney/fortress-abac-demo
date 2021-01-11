@@ -16,7 +16,7 @@
         http://www.springframework.org/schema/security/spring-security.xsd">
 
 	<!-- Turn on component scanning to enable Spring-aware static initialization for the ConnectionFactory class. -->
-	<context:component-scan base-package="com.mycompany"/>
+	<context:component-scan base-package="com.abac"/>
 
     <!-- The Fortress Access Manager bean used for IAM -->
     <bean id="accessMgr" class="org.apache.directory.fortress.core.AccessMgrFactory" scope="prototype"
@@ -90,11 +90,11 @@
         <property name="securityMetadataSource">
             <sec:filter-security-metadata-source use-expressions="false">
                 <!-- before spring interceptor recognizes these roles,the j2ee pre-authentication filter requires prior java ee security constraint in web.xml -->
-                <sec:intercept-url pattern="/wicket/bookmarkable/com.mycompany.Page1"
+                <sec:intercept-url pattern="/wicket/bookmarkable/com.abac.Page1"
                                    access="ROLE_ABAC_DEMO_P1"/>
-                <sec:intercept-url pattern="/wicket/bookmarkable/com.mycompany.Page2"
+                <sec:intercept-url pattern="/wicket/bookmarkable/com.abac.Page2"
                                    access="ROLE_ABAC_DEMO_P2"/>
-                <sec:intercept-url pattern="/wicket/bookmarkable/com.mycompany.Page3"
+                <sec:intercept-url pattern="/wicket/bookmarkable/com.abac.Page3"
                                    access="ROLE_ABAC_DEMO_P3"/>
             </sec:filter-security-metadata-source>
         </property>

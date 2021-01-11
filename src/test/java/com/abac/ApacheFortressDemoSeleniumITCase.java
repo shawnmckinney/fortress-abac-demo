@@ -1,7 +1,7 @@
 /*
  * This is free and unencumbered software released into the public domain.
  */
-package com.mycompany;
+package com.abac;
 
 import java.lang.String;
 import java.util.List;
@@ -283,7 +283,7 @@ public class ApacheFortressDemoSeleniumITCase
         doActivateTest( GlobalIds.USER_3_789, GlobalIds.PAGE_3, GlobalIds.BTN_PAGE_3, GlobalIds.ROLE_PAGE3_789, null, C789, C123, false );
         logout( GlobalIds.USER_1_789 );
         
-        // SuperUser has access to all pages and all customer data without restriction:
+        // asuperuser has access to all pages and all customer data without restriction:
         login( GlobalIds.SUPER_USER, "password");
         TUtils.sleep( 1 );
         doPositiveButtonTests( GlobalIds.PAGE_1, GlobalIds.BTN_PAGE_1 );
@@ -311,7 +311,7 @@ public class ApacheFortressDemoSeleniumITCase
         TUtils.sleep( 1 );
         logout( GlobalIds.SUPER_USER );
 
-        // Poweruser has access to all pages, and all customer data with DSD constraints applied:
+        // apoweruser has access to all pages, and all customer data with DSD constraints applied:
         login( GlobalIds.POWER_USER, "password");
         TUtils.sleep( 1 );
         driver.findElement( By.linkText( GlobalIds.PAGE_1 ) ).click();
@@ -514,7 +514,7 @@ public class ApacheFortressDemoSeleniumITCase
         String pageName = linkName;
         // convert from link name to page name for url:
         pageName = pageName.substring( 0, 1 ) + pageName.substring( 1 ).toLowerCase();
-        String unauthorizedUrl = baseUrl + "/wicket/bookmarkable/com.mycompany." + pageName;
+        String unauthorizedUrl = baseUrl + "/wicket/bookmarkable/com.abac." + pageName;
         driver.get( unauthorizedUrl );
         if(is403())
         {

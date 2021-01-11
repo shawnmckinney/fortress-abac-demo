@@ -1,14 +1,13 @@
 /*
  * This is free and unencumbered software released into the public domain.
  */
-package com.mycompany;
+package com.abac;
 
 
 import org.apache.log4j.Logger;
 import org.apache.wicket.markup.html.basic.Label;
 
 import javax.servlet.http.HttpServletRequest;
-import java.security.Principal;
 
 /**
  * @author Shawn McKinney

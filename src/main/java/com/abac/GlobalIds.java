@@ -1,7 +1,7 @@
 /*
  * This is free and unencumbered software released into the public domain.
  */
-package com.mycompany;
+package com.abac;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,27 +19,27 @@ public class GlobalIds
     public static final String SEARCH = "search";
     public static final String READ = "read";
 
-    public static final String SUPER_USER = "superuser";
-    public static final String POWER_USER = "poweruser";
+    public static final String SUPER_USER = "asuperuser";
+    public static final String POWER_USER = "apoweruser";
 
-    public static final String USER_1 = "user1";
-    public static final String USER_1_123 = "user1_123";
-    public static final String USER_1_456 = "user1_456";
-    public static final String USER_1_789 = "user1_789";
+    public static final String USER_1 = "auser1";
+    public static final String USER_1_123 = "auser1_123";
+    public static final String USER_1_456 = "auser1_456";
+    public static final String USER_1_789 = "auser1_789";
 
-    public static final String USER_2 = "user2";
-    public static final String USER_2_123 = "user2_123";
-    public static final String USER_2_456 = "user2_456";
-    public static final String USER_2_789 = "user2_789";
+    public static final String USER_2 = "auser2";
+    public static final String USER_2_123 = "auser2_123";
+    public static final String USER_2_456 = "auser2_456";
+    public static final String USER_2_789 = "auser2_789";
 
-    public static final String USER_3 = "user3";
-    public static final String USER_3_123 = "user3_123";
-    public static final String USER_3_456 = "user3_456";
-    public static final String USER_3_789 = "user3_789";
+    public static final String USER_3 = "auser3";
+    public static final String USER_3_123 = "auser3_123";
+    public static final String USER_3_456 = "auser3_456";
+    public static final String USER_3_789 = "auser3_789";
 
-    public static final String USER_123 = "user123";
-    public static final String USER_456 = "user456";
-    public static final String USER_789 = "user789";
+    public static final String USER_123 = "auser123";
+    public static final String USER_456 = "auser456";
+    public static final String USER_789 = "auser789";
 
     public static final String USER_ID = "userId";
     public static final String PSWD_FIELD = "pswdField";
@@ -47,9 +47,9 @@ public class GlobalIds
     public static final String PAGE_1 = "PAGE1";
     public static final String BTN_PAGE_1 = "page1";
 
-    public static final String PAGE1_OBJNAME = "com.mycompany.Page1";
-    public static final String PAGE2_OBJNAME = "com.mycompany.Page2";
-    public static final String PAGE3_OBJNAME = "com.mycompany.Page3";
+    public static final String PAGE1_OBJNAME = "com.abac.Page1";
+    public static final String PAGE2_OBJNAME = "com.abac.Page2";
+    public static final String PAGE3_OBJNAME = "com.abac.Page3";
 
     public static final String PAGE_2 = "PAGE2";
     public static final String BTN_PAGE_2 = "page2";

@@ -1,7 +1,7 @@
 /*
  * This is free and unencumbered software released into the public domain.
  */
-package com.mycompany;
+package com.abac;
 
 import org.apache.directory.fortress.web.control.WicketSession;
 import org.apache.wicket.Session;

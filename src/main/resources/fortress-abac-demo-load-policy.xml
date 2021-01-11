@@ -12,43 +12,43 @@
         <FortressAdmin>
 
             <deluser>
-                <user userId="superuser"/>
-                <user userId="poweruser"/>
-                <user userId="user1"/>
-                <user userId="user1_123"/>
-                <user userId="user1_456"/>
-                <user userId="user1_789"/>
-                <user userId="user2"/>
-                <user userId="user2_123"/>
-                <user userId="user2_456"/>
-                <user userId="user2_789"/>
-                <user userId="user3"/>
-                <user userId="user3_123"/>
-                <user userId="user3_456"/>
-                <user userId="user3_789"/>
-                <user userId="user123"/>
-                <user userId="user456"/>
-                <user userId="user789"/>
+                <user userId="asuperuser"/>
+                <user userId="apoweruser"/>
+                <user userId="auser1"/>
+                <user userId="auser1_123"/>
+                <user userId="auser1_456"/>
+                <user userId="auser1_789"/>
+                <user userId="auser2"/>
+                <user userId="auser2_123"/>
+                <user userId="auser2_456"/>
+                <user userId="auser2_789"/>
+                <user userId="auser3"/>
+                <user userId="auser3_123"/>
+                <user userId="auser3_456"/>
+                <user userId="auser3_789"/>
+                <user userId="auser123"/>
+                <user userId="auser456"/>
+                <user userId="auser789"/>
             </deluser>
 
             <adduser>
-                <user userId="superuser" password="password" description="Fortress ABAC Demo SuperUser" ou="Demo2Users" cn="test2" sn="superuser" />
-                <user userId="poweruser" password="password" description="Fortress ABAC Demo PowerUser" ou="Demo2Users" cn="test2" sn="poweruser" />
-                <user userId="user1" password="password" description="Fortress ABAC Demo User1" ou="Demo2Users" cn="test2" sn="user1" />
-                <user userId="user1_123" password="password" description="Fortress ABAC Demo User1 Customer 123" ou="Demo2Users" cn="test2" sn="user1_123" />
-                <user userId="user1_456" password="password" description="Fortress ABAC Demo User1 Customer 456" ou="Demo2Users" cn="test2" sn="user1_456" />
-                <user userId="user1_789" password="password" description="Fortress ABAC Demo User1 Customer 123" ou="Demo2Users" cn="test2" sn="user1_789" />
-                <user userId="user2" password="password" description="Fortress ABAC Demo User2" ou="Demo2Users" cn="test2" sn="user2" />
-                <user userId="user2_123" password="password" description="Fortress ABAC Demo User2 Customer 123" ou="Demo2Users" cn="test2" sn="user2_123" />
-                <user userId="user2_456" password="password" description="Fortress ABAC Demo User2 Customer 456" ou="Demo2Users" cn="test2" sn="user2_456" />
-                <user userId="user2_789" password="password" description="Fortress ABAC Demo User2 Customer 789" ou="Demo2Users" cn="test2" sn="user2_789" />
-                <user userId="user3" password="password" description="Fortress ABAC Demo User3" ou="Demo2Users" cn="test2" sn="user3" />
-                <user userId="user3_123" password="password" description="Fortress ABAC Demo User3 Customer 123" ou="Demo2Users" cn="test2" sn="user3_123" />
-                <user userId="user3_456" password="password" description="Fortress ABAC Demo User3 Customer 456" ou="Demo2Users" cn="test2" sn="user3_456" />
-                <user userId="user3_789" password="password" description="Apache Fortress Demo User3 Customer 789" ou="Demo2Users" cn="test2" sn="user3_789" />
-                <user userId="user123" password="password" description="Apache Fortress Demo User123 Access all Pages for Customer 123" ou="Demo2Users" cn="test2" sn="user123" />
-                <user userId="user456" password="password" description="Apache Fortress Demo User456 Access all Pages for Customer 456" ou="Demo2Users" cn="test2" sn="user456" />
-                <user userId="user789" password="password" description="Apache Fortress Demo User789 Access all Pages for Customer 789" ou="Demo2Users" cn="test2" sn="user789" />
+                <user userId="asuperuser" password="password" description="Fortress ABAC Demo asuperuser" ou="Demo2Users" cn="test2" sn="asuperuser" />
+                <user userId="apoweruser" password="password" description="Fortress ABAC Demo apoweruser" ou="Demo2Users" cn="test2" sn="apoweruser" />
+                <user userId="auser1" password="password" description="Fortress ABAC Demo auser1" ou="Demo2Users" cn="test2" sn="auser1" />
+                <user userId="auser1_123" password="password" description="Fortress ABAC Demo auser1 Customer 123" ou="Demo2Users" cn="test2" sn="auser1_123" />
+                <user userId="auser1_456" password="password" description="Fortress ABAC Demo auser1 Customer 456" ou="Demo2Users" cn="test2" sn="auser1_456" />
+                <user userId="auser1_789" password="password" description="Fortress ABAC Demo auser1 Customer 123" ou="Demo2Users" cn="test2" sn="auser1_789" />
+                <user userId="auser2" password="password" description="Fortress ABAC Demo auser2" ou="Demo2Users" cn="test2" sn="auser2" />
+                <user userId="auser2_123" password="password" description="Fortress ABAC Demo auser2 Customer 123" ou="Demo2Users" cn="test2" sn="auser2_123" />
+                <user userId="auser2_456" password="password" description="Fortress ABAC Demo auser2 Customer 456" ou="Demo2Users" cn="test2" sn="auser2_456" />
+                <user userId="auser2_789" password="password" description="Fortress ABAC Demo auser2 Customer 789" ou="Demo2Users" cn="test2" sn="auser2_789" />
+                <user userId="auser3" password="password" description="Fortress ABAC Demo auser3" ou="Demo2Users" cn="test2" sn="auser3" />
+                <user userId="auser3_123" password="password" description="Fortress ABAC Demo auser3 Customer 123" ou="Demo2Users" cn="test2" sn="auser3_123" />
+                <user userId="auser3_456" password="password" description="Fortress ABAC Demo auser3 Customer 456" ou="Demo2Users" cn="test2" sn="auser3_456" />
+                <user userId="auser3_789" password="password" description="Apache Fortress Demo auser3 Customer 789" ou="Demo2Users" cn="test2" sn="auser3_789" />
+                <user userId="auser123" password="password" description="Apache Fortress Demo auser123 Access all Pages for Customer 123" ou="Demo2Users" cn="test2" sn="auser123" />
+                <user userId="auser456" password="password" description="Apache Fortress Demo auser456 Access all Pages for Customer 456" ou="Demo2Users" cn="test2" sn="auser456" />
+                <user userId="auser789" password="password" description="Apache Fortress Demo auser789 Access all Pages for Customer 789" ou="Demo2Users" cn="test2" sn="auser789" />
             </adduser>
 
             <delroleconstraint>
@@ -64,158 +64,158 @@
                 <roleconstraint role="ABAC_PAGE2" key="customer" typeName="USER"/>
                 <roleconstraint role="ABAC_PAGE3" key="customer" typeName="USER"/>
 
-                <roleconstraint userId="poweruser" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="poweruser" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="poweruser" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
 
-                <roleconstraint userId="poweruser" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="poweruser" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="poweruser" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
 
-                <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="poweruser" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="apoweruser" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
 
-                <!-- User1 Access to all Customers Page1 only -->
-                <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="user1" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+                <!-- auser1 Access to all Customers Page1 only -->
+                <roleconstraint userId="auser1" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="auser1" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="auser1" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
 
-                <!-- User1_123 Access to Page 1, Customer 123 only -->
-                <roleconstraint userId="user1_123" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+                <!-- auser1_123 Access to Page 1, Customer 123 only -->
+                <roleconstraint userId="auser1_123" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
 
-                <!-- User1_456 Access to Page 1, Customer 456 only -->
-                <roleconstraint userId="User1_456" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+                <!-- auser1_456 Access to Page 1, Customer 456 only -->
+                <roleconstraint userId="auser1_456" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
 
-                <!-- User1_789 Access to Page 1, Customer 789 only -->
-                <roleconstraint userId="User1_789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+                <!-- auser1_789 Access to Page 1, Customer 789 only -->
+                <roleconstraint userId="auser1_789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
 
-                <!-- User2 Access to all Customers Page2 only -->
-                <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="User2" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+                <!-- auser2 Access to all Customers Page2 only -->
+                <roleconstraint userId="auser2" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="auser2" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="auser2" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
 
-                <!-- User2_123 Access to Page 2, Customer 123 only -->
-                <roleconstraint userId="User2_123" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+                <!-- auser2_123 Access to Page 2, Customer 123 only -->
+                <roleconstraint userId="auser2_123" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
 
-                <!-- User2_456 Access to Page 2, Customer 456 only -->
-                <roleconstraint userId="User2_456" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+                <!-- auser2_456 Access to Page 2, Customer 456 only -->
+                <roleconstraint userId="auser2_456" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
 
-                <!-- User2_789 Access to Page 2, Customer 789 only -->
-                <roleconstraint userId="User2_789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+                <!-- auser2_789 Access to Page 2, Customer 789 only -->
+                <roleconstraint userId="auser2_789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
 
-                <!-- User3 Access to all Customers Page3 only -->
-                <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="User3" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+                <!-- auser3 Access to all Customers Page3 only -->
+                <roleconstraint userId="auser3" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="auser3" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="auser3" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
 
-                <!-- User3_123 Access to Page 3, Customer 123 only -->
-                <roleconstraint userId="User3_123" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+                <!-- auser3_123 Access to Page 3, Customer 123 only -->
+                <roleconstraint userId="auser3_123" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
 
-                <!-- User3_456 Access to Page 3, Customer 456 only -->
-                <roleconstraint userId="User3_456" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+                <!-- auser3_456 Access to Page 3, Customer 456 only -->
+                <roleconstraint userId="auser3_456" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
 
-                <!-- User3_789 Access to Page 3, Customer 789 only -->
-                <roleconstraint userId="User3_789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+                <!-- auser3_789 Access to Page 3, Customer 789 only -->
+                <roleconstraint userId="auser3_789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
 
-                <!-- User123 Access to all pages, Customer 123 only -->
-                <roleconstraint userId="User123" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="User123" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
-                <roleconstraint userId="User123" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
+                <!-- auser123 Access to all pages, Customer 123 only -->
+                <roleconstraint userId="auser123" role="ABAC_PAGE1" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="auser123" role="ABAC_PAGE2" key="customer" value="123" typeName="USER"/>
+                <roleconstraint userId="auser123" role="ABAC_PAGE3" key="customer" value="123" typeName="USER"/>
 
-                <!-- User456 Access to all pages, Customer 456 only -->
-                <roleconstraint userId="User456" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="User456" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
-                <roleconstraint userId="User456" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
+                <!-- auser456 Access to all pages, Customer 456 only -->
+                <roleconstraint userId="auser456" role="ABAC_PAGE1" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="auser456" role="ABAC_PAGE2" key="customer" value="456" typeName="USER"/>
+                <roleconstraint userId="auser456" role="ABAC_PAGE3" key="customer" value="456" typeName="USER"/>
 
-                <!-- User789 Access to all pages, Customer 789 only -->
-                <roleconstraint userId="User789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
-                <roleconstraint userId="User789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
-                <roleconstraint userId="User789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
+                <!-- auser789 Access to all pages, Customer 789 only -->
+                <roleconstraint userId="auser789" role="ABAC_PAGE1" key="customer" value="789" typeName="USER"/>
+                <roleconstraint userId="auser789" role="ABAC_PAGE2" key="customer" value="789" typeName="USER"/>
+                <roleconstraint userId="auser789" role="ABAC_PAGE3" key="customer" value="789" typeName="USER"/>
             </addroleconstraint>
 
 
             <adduserrole>
-                <!-- Superuser access to all pages, no constraints -->
-                <userrole userId="superuser" name="ROLE_ABAC_SUPER_USER" />
+                <!-- asuperuser access to all pages, no constraints -->
+                <userrole userId="asuperuser" name="ROLE_ABAC_SUPER_USER" />
 
-                <!-- Poweruser access to all pages with constraints -->
-                <userrole userId="poweruser" name="FORTRESS_ABAC_DEMO_ALL_PAGES" />
-                <userrole userId="poweruser" name="ABAC_PAGE1" />
-                <userrole userId="poweruser" name="ABAC_PAGE2" />
-                <userrole userId="poweruser" name="ABAC_PAGE3" />
+                <!-- apoweruser access to all pages with constraints -->
+                <userrole userId="apoweruser" name="FORTRESS_ABAC_DEMO_ALL_PAGES" />
+                <userrole userId="apoweruser" name="ABAC_PAGE1" />
+                <userrole userId="apoweruser" name="ABAC_PAGE2" />
+                <userrole userId="apoweruser" name="ABAC_PAGE3" />
 
-                <!-- User1 Access to all Customers ABAC_PAGE1 only -->
-                <userrole userId="user1" name="ROLE_ABAC_DEMO_P1" />
-                <userrole userId="user1" name="ABAC_PAGE1" />
+                <!-- auser1 Access to all Customers ABAC_PAGE1 only -->
+                <userrole userId="auser1" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="auser1" name="ABAC_PAGE1" />
 
-                <!-- User1_123 Access to Page 1, Customer 123 only -->
-                <userrole userId="user1_123" name="ROLE_ABAC_DEMO_P1" />
-                <userrole userId="user1_123" name="ABAC_PAGE1" />
+                <!-- auser1_123 Access to Page 1, Customer 123 only -->
+                <userrole userId="auser1_123" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="auser1_123" name="ABAC_PAGE1" />
 
-                <!-- User1_456 Access to Page 1, Customer 456 only -->
-                <userrole userId="user1_456" name="ROLE_ABAC_DEMO_P1" />
-                <userrole userId="user1_456" name="ABAC_PAGE1" />
+                <!-- auser1_456 Access to Page 1, Customer 456 only -->
+                <userrole userId="auser1_456" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="auser1_456" name="ABAC_PAGE1" />
 
-                <!-- User1_789 Access to Page 1, Customer 789 only -->
-                <userrole userId="user1_789" name="ROLE_ABAC_DEMO_P1" />
-                <userrole userId="user1_789" name="ABAC_PAGE1" />
+                <!-- auser1_789 Access to Page 1, Customer 789 only -->
+                <userrole userId="auser1_789" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="auser1_789" name="ABAC_PAGE1" />
 
-                <!-- User2 Access to all Customers Page2 only -->
-                <userrole userId="user2" name="ROLE_ABAC_DEMO_P2" />
-                <userrole userId="user2" name="ABAC_PAGE2" />
+                <!-- auser2 Access to all Customers Page2 only -->
+                <userrole userId="auser2" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="auser2" name="ABAC_PAGE2" />
 
-                <!-- User2_123 Access to Page 2, Customer 123 only -->
-                <userrole userId="user2_123" name="ROLE_ABAC_DEMO_P2" />
-                <userrole userId="user2_123" name="ABAC_PAGE2" />
+                <!-- auser2_123 Access to Page 2, Customer 123 only -->
+                <userrole userId="auser2_123" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="auser2_123" name="ABAC_PAGE2" />
 
-                <!-- User2_456 Access to Page 2, Customer 456 only -->
-                <userrole userId="user2_456" name="ROLE_ABAC_DEMO_P2" />
-                <userrole userId="user2_456" name="ABAC_PAGE2" />
+                <!-- auser2_456 Access to Page 2, Customer 456 only -->
+                <userrole userId="auser2_456" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="auser2_456" name="ABAC_PAGE2" />
 
-                <!-- User2_789 Access to Page 2, Customer 789 only -->
-                <userrole userId="user2_789" name="ROLE_ABAC_DEMO_P2" />
-                <userrole userId="user2_789" name="ABAC_PAGE2" />
+                <!-- auser2_789 Access to Page 2, Customer 789 only -->
+                <userrole userId="auser2_789" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="auser2_789" name="ABAC_PAGE2" />
 
-                <!-- User3 Access to all Customers Page3 only -->
-                <userrole userId="user3" name="ROLE_ABAC_DEMO_P3" />
-                <userrole userId="user3" name="ABAC_PAGE3" />
+                <!-- auser3 Access to all Customers Page3 only -->
+                <userrole userId="auser3" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="auser3" name="ABAC_PAGE3" />
 
-                <!-- User3_123 Access to Page 3, Customer 123 only -->
-                <userrole userId="user3_123" name="ROLE_ABAC_DEMO_P3" />
-                <userrole userId="user3_123" name="ABAC_PAGE3" />
+                <!-- auser3_123 Access to Page 3, Customer 123 only -->
+                <userrole userId="auser3_123" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="auser3_123" name="ABAC_PAGE3" />
 
-                <!-- User3_456 Access to Page 3, Customer 456 only -->
-                <userrole userId="user3_456" name="ROLE_ABAC_DEMO_P3" />
-                <userrole userId="user3_456" name="ABAC_PAGE3" />
+                <!-- auser3_456 Access to Page 3, Customer 456 only -->
+                <userrole userId="auser3_456" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="auser3_456" name="ABAC_PAGE3" />
 
-                <!-- User3_789 Access to Page 3, Customer 789 only -->
-                <userrole userId="user3_789" name="ROLE_ABAC_DEMO_P3" />
-                <userrole userId="user3_789" name="ABAC_PAGE3" />
+                <!-- auser3_789 Access to Page 3, Customer 789 only -->
+                <userrole userId="auser3_789" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="auser3_789" name="ABAC_PAGE3" />
 
-                <!-- User123 Access to all pages, Customer 123 only -->
-                <userrole userId="user123" name="ROLE_ABAC_DEMO_P1" />
-                <userrole userId="user123" name="ROLE_ABAC_DEMO_P2" />
-                <userrole userId="user123" name="ROLE_ABAC_DEMO_P3" />
-                <userrole userId="user123" name="ABAC_PAGE1" />
-                <userrole userId="user123" name="ABAC_PAGE2" />
-                <userrole userId="user123" name="ABAC_PAGE3" />
+                <!-- auser123 Access to all pages, Customer 123 only -->
+                <userrole userId="auser123" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="auser123" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="auser123" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="auser123" name="ABAC_PAGE1" />
+                <userrole userId="auser123" name="ABAC_PAGE2" />
+                <userrole userId="auser123" name="ABAC_PAGE3" />
 
-                <!-- User456 Access to all pages, Customer 456 only -->
-                <userrole userId="user456" name="ROLE_ABAC_DEMO_P1" />
-                <userrole userId="user456" name="ROLE_ABAC_DEMO_P2" />
-                <userrole userId="user456" name="ROLE_ABAC_DEMO_P3" />
-                <userrole userId="user456" name="ABAC_PAGE1" />
-                <userrole userId="user456" name="ABAC_PAGE2" />
-                <userrole userId="user456" name="ABAC_PAGE3" />
+                <!-- auser456 Access to all pages, Customer 456 only -->
+                <userrole userId="auser456" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="auser456" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="auser456" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="auser456" name="ABAC_PAGE1" />
+                <userrole userId="auser456" name="ABAC_PAGE2" />
+                <userrole userId="auser456" name="ABAC_PAGE3" />
 
-                <!-- User789 Access to all pages, Customer 789 only -->
-                <userrole userId="user789" name="ROLE_ABAC_DEMO_P1" />
-                <userrole userId="user789" name="ROLE_ABAC_DEMO_P2" />
-                <userrole userId="user789" name="ROLE_ABAC_DEMO_P3" />
-                <userrole userId="user789" name="ABAC_PAGE1" />
-                <userrole userId="user789" name="ABAC_PAGE2" />
-                <userrole userId="user789" name="ABAC_PAGE3" />
+                <!-- auser789 Access to all pages, Customer 789 only -->
+                <userrole userId="auser789" name="ROLE_ABAC_DEMO_P1" />
+                <userrole userId="auser789" name="ROLE_ABAC_DEMO_P2" />
+                <userrole userId="auser789" name="ROLE_ABAC_DEMO_P3" />
+                <userrole userId="auser789" name="ABAC_PAGE1" />
+                <userrole userId="auser789" name="ABAC_PAGE2" />
+                <userrole userId="auser789" name="ABAC_PAGE3" />
             </adduserrole>
 
             <delrole>
@@ -255,50 +255,50 @@
             </addroleinheritance>
 
             <addpermgrant>
-                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="FORTRESS_ABAC_DEMO_ALL_PAGES"/>
-                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P1"/>
-                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P2"/>
-                <permgrant objName="com.mycompany.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P3"/>
+                <permgrant objName="com.abac.MyBasePage" opName="activateConstraint" roleNm="FORTRESS_ABAC_DEMO_ALL_PAGES"/>
+                <permgrant objName="com.abac.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P1"/>
+                <permgrant objName="com.abac.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P2"/>
+                <permgrant objName="com.abac.MyBasePage" opName="activateConstraint" roleNm="ROLE_ABAC_DEMO_P3"/>
 
-                <permgrant objName="com.mycompany.Page1" opName="Add"      roleNm="ABAC_PAGE1"/>
-                <permgrant objName="com.mycompany.Page1" opName="Update"   roleNm="ABAC_PAGE1" />
-                <permgrant objName="com.mycompany.Page1" opName="Delete"   roleNm="ABAC_PAGE1"/>
-                <permgrant objName="com.mycompany.Page1" opName="Search"   roleNm="ABAC_PAGE1"/>
-                <permgrant objName="com.mycompany.Page1" opName="Read"     roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.abac.Page1" opName="Add"      roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.abac.Page1" opName="Update"   roleNm="ABAC_PAGE1" />
+                <permgrant objName="com.abac.Page1" opName="Delete"   roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.abac.Page1" opName="Search"   roleNm="ABAC_PAGE1"/>
+                <permgrant objName="com.abac.Page1" opName="Read"     roleNm="ABAC_PAGE1"/>
 
-                <permgrant objName="com.mycompany.Page2" opName="Add"      roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Update"   roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Delete"   roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Search"   roleNm="ABAC_PAGE2"/>
-                <permgrant objName="com.mycompany.Page2" opName="Read"     roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.abac.Page2" opName="Add"      roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.abac.Page2" opName="Update"   roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.abac.Page2" opName="Delete"   roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.abac.Page2" opName="Search"   roleNm="ABAC_PAGE2"/>
+                <permgrant objName="com.abac.Page2" opName="Read"     roleNm="ABAC_PAGE2"/>
 
-                <permgrant objName="com.mycompany.Page3" opName="Add"      roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Update"   roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Delete"   roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Search"   roleNm="ABAC_PAGE3"/>
-                <permgrant objName="com.mycompany.Page3" opName="Read"     roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.abac.Page3" opName="Add"      roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.abac.Page3" opName="Update"   roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.abac.Page3" opName="Delete"   roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.abac.Page3" opName="Search"   roleNm="ABAC_PAGE3"/>
+                <permgrant objName="com.abac.Page3" opName="Read"     roleNm="ABAC_PAGE3"/>
 
-                <permgrant objName="com.mycompany.Page1" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page1" opName="Read"     roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page2" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
-                <permgrant objName="com.mycompany.Page3" opName="Read"     roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page1" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page1" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page1" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page1" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page1" opName="Read"     roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page2" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page2" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page2" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page2" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page3" opName="Add"      roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page3" opName="Update"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page3" opName="Delete"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page3" opName="Search"   roleNm="ROLE_ABAC_SUPER_USER"/>
+                <permgrant objName="com.abac.Page3" opName="Read"     roleNm="ROLE_ABAC_SUPER_USER"/>
             </addpermgrant>
 
             <delpermobj>
-                <permobj objName="com.mycompany.MyBasePage"/>
-                <permobj objName="com.mycompany.Page1"/>
-                <permobj objName="com.mycompany.Page2"/>
-                <permobj objName="com.mycompany.Page3"/>
+                <permobj objName="com.abac.MyBasePage"/>
+                <permobj objName="com.abac.Page1"/>
+                <permobj objName="com.abac.Page2"/>
+                <permobj objName="com.abac.Page3"/>
                 <permobj objName="org.apache.directory.fortress.core.rbac.AccessMgrImpl"/>
                 <permobj objName="ROLE_ABAC_DEMO_P1" />
                 <permobj objName="ROLE_ABAC_DEMO_P2"/>
@@ -306,10 +306,10 @@
             </delpermobj>
 
             <addpermobj>
-                <permobj objName="com.mycompany.MyBasePage" description="Fortress Demo2 BasePage" ou="Demo2Perms" type="Page"/>
-                <permobj objName="com.mycompany.Page1" description="Fortress Demo2 Page 1" ou="Demo2Perms" type="Page"/>
-                <permobj objName="com.mycompany.Page2" description="Fortress Demo2 Page 2" ou="Demo2Perms" type="Page"/>
-                <permobj objName="com.mycompany.Page3" description="Fortress Demo2 Page 3" ou="Demo2Perms" type="Page"/>
+                <permobj objName="com.abac.MyBasePage" description="Fortress Demo2 BasePage" ou="Demo2Perms" type="Page"/>
+                <permobj objName="com.abac.Page1" description="Fortress Demo2 Page 1" ou="Demo2Perms" type="Page"/>
+                <permobj objName="com.abac.Page2" description="Fortress Demo2 Page 2" ou="Demo2Perms" type="Page"/>
+                <permobj objName="com.abac.Page3" description="Fortress Demo2 Page 3" ou="Demo2Perms" type="Page"/>
                 <permobj objName="org.apache.directory.fortress.core.rbac.AccessMgrImpl" description="Used to perform role activation functions" ou="Demo2Perms" type="Page"/>
                 <permobj objName="ROLE_ABAC_DEMO_P1" description="Used to perform ROLE_ABAC_DEMO_P1 role activation functions" ou="Demo2Perms" type="Button"/>
                 <permobj objName="ROLE_ABAC_DEMO_P2" description="Used to perform ROLE_ABAC_DEMO_P12 role activation functions" ou="Demo2Perms" type="Button"/>
@@ -317,29 +317,29 @@
             </addpermobj>
 
             <addpermop>
-                <permop objName="com.mycompany.MyBasePage" opName="activateConstraint" type="Button" description="Permission for com.mycompany.MyBasePage.activateConstraint"/>
+                <permop objName="com.abac.MyBasePage" opName="activateConstraint" type="Button" description="Permission for com.abac.MyBasePage.activateConstraint"/>
                 <permop objName="ROLE_ABAC_DEMO_P1" opName="activateConstraint" type="Button" description="Permission for ROLE_ABAC_DEMO_P1.activateConstraint"/>
                 <permop objName="ROLE_ABAC_DEMO_P2" opName="activateConstraint" type="Button" description="Permission for ROLE_ABAC_DEMO_P2.activateConstraint"/>
                 <permop objName="ROLE_ABAC_DEMO_P3" opName="activateConstraint" type="Button" description="Permission for ROLE_ABAC_DEMO_P3.activateConstraint"/>
                 <permop objName="org.apache.directory.fortress.core.rbac.AccessMgrImpl" opName="activateConstraint" type="Button" description="Permission for AccessMgrImpl.activateConstraint"/>
 
-                <permop objName="com.mycompany.Page1" opName="Add"      description="Permission for page1.add"/>
-                <permop objName="com.mycompany.Page1" opName="Update"   description="Permission for page1.update"/>
-                <permop objName="com.mycompany.Page1" opName="Delete"   description="Permission for page1.delete on Customer record 789"/>
-                <permop objName="com.mycompany.Page1" opName="Search"   description="Permission for page1.search"/>
-                <permop objName="com.mycompany.Page1" opName="Read"     description="Permission for page1.read"/>
+                <permop objName="com.abac.Page1" opName="Add"      description="Permission for page1.add"/>
+                <permop objName="com.abac.Page1" opName="Update"   description="Permission for page1.update"/>
+                <permop objName="com.abac.Page1" opName="Delete"   description="Permission for page1.delete on Customer record 789"/>
+                <permop objName="com.abac.Page1" opName="Search"   description="Permission for page1.search"/>
+                <permop objName="com.abac.Page1" opName="Read"     description="Permission for page1.read"/>
 
-                <permop objName="com.mycompany.Page2" opName="Add"      description="Permission for page2.add"/>
-                <permop objName="com.mycompany.Page2" opName="Update"   description="Permission for page1.update"/>
-                <permop objName="com.mycompany.Page2" opName="Delete"   description="Permission for page2.delete"/>
-                <permop objName="com.mycompany.Page2" opName="Search"   description="Permission for page2.search"/>
-                <permop objName="com.mycompany.Page2" opName="Read"     description="Permission for page2.read"/>
+                <permop objName="com.abac.Page2" opName="Add"      description="Permission for page2.add"/>
+                <permop objName="com.abac.Page2" opName="Update"   description="Permission for page1.update"/>
+                <permop objName="com.abac.Page2" opName="Delete"   description="Permission for page2.delete"/>
+                <permop objName="com.abac.Page2" opName="Search"   description="Permission for page2.search"/>
+                <permop objName="com.abac.Page2" opName="Read"     description="Permission for page2.read"/>
 
-                <permop objName="com.mycompany.Page3" opName="Add"      description="Permission for page3.add"/>
-                <permop objName="com.mycompany.Page3" opName="Update"   description="Permission for page3.update"/>
-                <permop objName="com.mycompany.Page3" opName="Delete"   description="Permission for page3.delete"/>
-                <permop objName="com.mycompany.Page3" opName="Search"   description="Permission for page3.search"/>
-                <permop objName="com.mycompany.Page3" opName="Read"     description="Permission for page3.read"/>
+                <permop objName="com.abac.Page3" opName="Add"      description="Permission for page3.add"/>
+                <permop objName="com.abac.Page3" opName="Update"   description="Permission for page3.update"/>
+                <permop objName="com.abac.Page3" opName="Delete"   description="Permission for page3.delete"/>
+                <permop objName="com.abac.Page3" opName="Search"   description="Permission for page3.search"/>
+                <permop objName="com.abac.Page3" opName="Read"     description="Permission for page3.read"/>
             </addpermop>
 
             <delorgunit>
