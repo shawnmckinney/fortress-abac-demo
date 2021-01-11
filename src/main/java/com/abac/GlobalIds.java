@@ -82,7 +82,7 @@ public class GlobalIds
     public static final String ROLE_PAGE3_456 = "PAGE3_456";
     public static final String ROLE_PAGE3_789 = "PAGE3_789";
 
-    public static final String CUSTOMER_EF_ID = "customer";
+    public static final String CUSTOMER_EF_ID = "custNum";
 
     public static final String ROLE_SUPER = "ROLE_ABAC_SUPER_USER";
     public static final String ROLE_PAGE1 = "ROLE_ABAC_DEMO_P1";
