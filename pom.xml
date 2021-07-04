@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.iamfortress</groupId>
     <artifactId>fortress-abac-demo</artifactId>
-    <version>2.0.5</version>
+    <version>2.0.6</version>
     <packaging>war</packaging>
     <name>Fortress ABAC Demo</name>
     <description>Sample Web App demonstrating attribute-based role constraints using Apache Fortress, Wicket, Mybatis Data Persistence Frameworks.</description>
@@ -37,7 +37,7 @@
     </developers>
 
     <properties>
-        <fortress.version>2.0.5</fortress.version>
+        <fortress.version>2.0.6</fortress.version>
         <version.junit>4.13.1</version.junit>
         <javadoc.version>2.9.1</javadoc.version>
         <title>${project.name} ${project.version}</title>

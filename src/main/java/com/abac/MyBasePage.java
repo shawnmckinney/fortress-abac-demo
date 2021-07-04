@@ -13,7 +13,8 @@ import org.apache.directory.fortress.web.control.SecUtils;
 import org.apache.directory.fortress.web.control.SecureBookmarkablePageLink;
 import org.apache.directory.fortress.web.control.SecureIndicatingAjaxButton;
 import org.apache.directory.fortress.web.control.WicketSession;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.attributes.AjaxCallListener;
@@ -47,7 +48,7 @@ public abstract class MyBasePage extends WebPage
     protected AccessMgr accessMgr;
     @SpringBean
     private J2eePolicyMgr j2eePolicyMgr;
-    private static final Logger LOG = Logger.getLogger( MyBasePage.class.getName() );
+    private static final Logger LOG = LoggerFactory.getLogger( MyBasePage.class.getName() );
     private Form myForm;
     private static final String LINKS_LABEL = "linksLabel";
     private String linksLabel = "Authorized Links";

@@ -4,7 +4,8 @@
 package com.abac;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.wicket.markup.html.basic.Label;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class LogoutPage extends MyBasePage
 {
-    private static final Logger LOG = Logger.getLogger( LogoutPage.class.getName() );
+    private static final Logger LOG = LoggerFactory.getLogger( LogoutPage.class.getName() );
     public LogoutPage()
     {
         HttpServletRequest servletReq = (HttpServletRequest)getRequest().getContainerRequest();
