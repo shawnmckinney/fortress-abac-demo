@@ -18,8 +18,8 @@
 -------------------------------------------------------------------------------
 ## SECTION I. Prerequisites
 1. Java 8
-2. Apache Maven 3++
-3. Apache Tomcat 8++
+2. Apache Maven >= 3
+3. Apache Tomcat >= 8
 4. Basic LDAP server setup by completing one of these:
     * [OpenLDAP & Fortress QUICKSTART](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-SLAPD.md)
     * [OpenLDAP & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-SLAPD.md)
@@ -34,7 +34,7 @@ This sample web app uses Java EE security.
 #### 1. Download the fortress realm proxy jar into tomcat/lib folder:
 
   ```bash
-  wget https://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.5/fortress-realm-proxy-2.0.5.jar -P $TOMCAT_HOME/lib
+  wget https://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.7/fortress-realm-proxy-2.0.7.jar -P $TOMCAT_HOME/lib
   ```
 
  * Where `$TOMCAT_HOME` points to the execution env.
@@ -57,7 +57,7 @@ This sample web app uses Java EE security.
 #### 4. Restart tomcat for new settings to take effect.
 
  Note: The proxy is a shim that uses a [URLClassLoader](http://docs.oracle.com/javase/7/docs/api/java/net/URLClassLoader.html) to reach its implementation libs.  It prevents
- the realm impl libs, pulled in as dependency to web app, from interfering with the container’s system classpath thus providing an error free deployment process free from
+ the realm impl libs, pulled in as dependency to web app, from interfering with the container’s system classpath thus providing an error free deployment process without
  classloader issues.  The proxy offers the flexibility for each web app to determine its own version/type of security realm to use, satisfying a variety of requirements
  related to web hosting and multitenancy.
 
@@ -147,7 +147,7 @@ This sample web app uses Java EE security.
  mvn -version
  ```
 
- This sample requires Java 8 and Maven 3 to be setup within the execution env.
+ This sample requires Java >= 8 and Maven >= 3 to be setup within the execution env.
 
 #### 2. Build the sample and load test data:
 
