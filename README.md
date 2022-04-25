@@ -56,11 +56,6 @@ This sample web app uses Java EE security.
 
 #### 4. Restart tomcat for new settings to take effect.
 
- Note: The proxy is a shim that uses a [URLClassLoader](http://docs.oracle.com/javase/7/docs/api/java/net/URLClassLoader.html) to reach its implementation libs.  It prevents
- the realm impl libs, pulled in as dependency to web app, from interfering with the container’s system classpath thus providing an error free deployment process without
- classloader issues.  The proxy offers the flexibility for each web app to determine its own version/type of security realm to use, satisfying a variety of requirements
- related to web hosting and multitenancy.
-
 -------------------------------------------------------------------------------
 ## SECTION III. Prepare package
 
@@ -338,7 +333,7 @@ To gain full understanding, check out the file used to load it into the LDAP dir
 
  Pushing the **customer** attribute into the User's RBAC session the runtime will match that instance data with their stored policy.
 
- ![Image4](images/auser123.png "View auser123 data")
+ ![Image4](images/user123.png "View auser123 data")
 
  *Notice that this user has been assigned Page1, Page2 and Page3 roles, via **ftRA** attribute, and that another attribute, **ftRC**, constrains which customer it can be activated.*
 
