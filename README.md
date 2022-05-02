@@ -309,27 +309,27 @@ To gain full understanding, check out the file used to load it into the LDAP dir
  Every time a constraint is activated, some code executes like this....
 
  ```java
- // Nothing new here:
-  User user = new User(userId);
+// Nothing new here:
+User user = new User(userId);
 
-  // This is new:
-  RoleConstraint constraint = new RoleConstraint( );
+// This is new:
+RoleConstraint constraint = new RoleConstraint( );
 
-  // In practice we're not gonna pass hard-coded key-values in here, but you get the idea:
-  constraint.setKey( "customer" );
-  constraint.setValue( "123" );
+// In practice we're not gonna pass hard-coded key-values in here, but you get the idea:
+constraint.setKey( "customer" );
+constraint.setValue( "123" );
 
-  // This is just boilerplate goop:
-  List<RoleConstraint> constraints = new ArrayList();
-  constraints.add( constraint );
+// This is just boilerplate:
+List<RoleConstraint> constraints = new ArrayList();
+constraints.add( constraint );
 
-  try
-  {
-      // Now, create the RBAC session with an ABAC constraint, customer=123, asserted:
-      Session session = accessMgr.createSession( user, constraints );
-      ...
-  }
- ```
+try
+{
+  // Now, create the RBAC session with an ABAC constraint, customer=123, asserted:
+  Session session = accessMgr.createSession( user, constraints );
+  ...
+}
+```
 
  Pushing the **customer** attribute into the User's RBAC session the runtime will match that instance data with their stored policy.
 
@@ -345,6 +345,14 @@ To gain full understanding, check out the file used to load it into the LDAP dir
  * During the [createSession](https://directory.apache.org/fortress/gen-docs/latest/apidocs/org/apache/directory/fortress/core/AccessMgr.html#createSession-org.apache.directory.fortress.core.model.User-boolean-) call, there's a role activation phase, where all of the constraints are applied.
  * Applying constraints is not a new concept with Fortress, check out, [What Are Temporal Constraints?](https://iamfortress.net/2015/06/11/what-are-temporal-constraints/), for more info.
  * Constraints are enabled via [fortress' configuration subsystem](https://github.com/apache/directory-fortress-core/blob/master/README-CONFIG.md).  Currently ABAC and temporal constraints are turned on by default.
+
+For example, user-role constraint enabled via the fortress.propeties file:
+
+```properties
+...
+# Enable the ABAC constraint validator:
+temporal.validator.5:org.apache.directory.fortress.core.util.time.UserRoleConstraint
+```
 
 ### One more thing:
  * ABAC constraints work with any kind of instance data, e.g. account, organization, etc.  Let your imagination set the boundaries.
