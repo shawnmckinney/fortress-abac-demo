@@ -17,7 +17,7 @@
 
 -------------------------------------------------------------------------------
 ## SECTION I. Prerequisites
-1. Java 8
+1. Java 11
 2. Apache Maven >= 3
 3. Apache Tomcat >= 8
 4. Basic LDAP server setup by completing one of these:
@@ -25,6 +25,7 @@
     * [OpenLDAP & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-SLAPD.md)
     * [APACHEDS & Fortress QUICKSTART](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-APACHEDS.md)    
     * [APACHEDS & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-APACHEDS.md)
+    * [ansible-apache-fortress](https://gitlab.symas.net/symas-public/ansible-apache-fortress)
 
 -------------------------------------------------------------------------------
 ## SECTION II. Prepare Tomcat for Java EE Security
@@ -34,7 +35,7 @@ This sample web app uses Java EE security.
 #### 1. Download the fortress realm proxy jar into tomcat/lib folder:
 
   ```bash
-  wget https://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.7/fortress-realm-proxy-2.0.7.jar -P $TOMCAT_HOME/lib
+  wget https://repo.maven.apache.org/maven2/org/apache/directory/fortress/fortress-realm-proxy/2.0.8/fortress-realm-proxy-2.0.8.jar -P $TOMCAT_HOME/lib
   ```
 
  * Where `$TOMCAT_HOME` points to the execution env.
@@ -142,7 +143,7 @@ This sample web app uses Java EE security.
  mvn -version
  ```
 
- This sample requires Java >= 8 and Maven >= 3 to be setup within the execution env.
+ This sample requires Java >= 11 and Maven >= 3 to be setup within the execution env.
 
 #### 2. Build the sample and load test data:
 
