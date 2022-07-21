@@ -139,17 +139,17 @@ This sample web app uses Java EE security.
 
 #### 1. Verify the java and maven home env variables are set.
 
- ```maven
- mvn -version
- ```
+```maven
+mvn -version
+```
 
  This sample requires Java >= 11 and Maven >= 3 to be setup within the execution env.
 
 #### 2. Build the sample and load test data:
 
-  ```maven
- mvn install -Dload.file
-  ```
+```maven
+mvn install -Dload.file
+```
 
  Build Notes:
  * `-Dload.file` automatically loads the [fortress-abac-demo-load-policy.xml](src/main/resources/fortress-abac-demo-load-policy.xml) data into ldap.
