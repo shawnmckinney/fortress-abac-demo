@@ -1,5 +1,5 @@
 /*
- * This is free and unencumbered software released into the public domain.
+ * © 2023 iamfortress.net
  */
 package com.abac;
 
@@ -90,7 +90,7 @@ public class GlobalIds
     public static final String ROLE_PAGE3 = "ROLE_ABAC_DEMO_P3";
     public static final String LOGOUT = "logout";
     public static final String ROLES_ACTIVATE = "roles.activate";
-    public static final String FOOTER = "This is free and unencumbered software released into the public domain.";
+    public static final String FOOTER = "© 2023 iamfortress.net";
     public static final String INFO_FIELD = "infoField";
     public static final String AUTHZ_ERROR_MSG = "Authorization Failed";
 
