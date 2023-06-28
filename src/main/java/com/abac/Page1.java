@@ -120,7 +120,7 @@ public class Page1 extends MyBasePage
                     info( GlobalIds.BTN_PAGE_1_UPDATE );
                     if( page1EO != null && checkAccess() )
                     {
-                        logIt( target, "Page1 Add for Customer " + activatedCustomer );
+                        logIt( target, "Page1 Update for Customer " + activatedCustomer );
                     }
                     else
                     {
@@ -159,7 +159,7 @@ public class Page1 extends MyBasePage
                     info( GlobalIds.BTN_PAGE_1_DELETE );
                     if( page1EO != null && checkAccess() )
                     {
-                        logIt( target, "Page1 Add for Customer " + activatedCustomer );
+                        logIt( target, "Page1 Delete for Customer " + activatedCustomer );
                     }
                     else
                     {
