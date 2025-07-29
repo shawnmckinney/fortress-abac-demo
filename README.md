@@ -1,4 +1,4 @@
-© 2023 iamfortress.net
+© 2025 iamfortress.net
 # Overview of the fortress-abac-demo README
 
  * This document demonstrates how to build and deploy the fortress abac sample.
@@ -20,7 +20,7 @@
 ## SECTION I. Prerequisites
 1. Java >= 17
 2. Apache Maven >= 3
-3. Apache Tomcat >= 10
+3. Apache Tomcat >= 11
 4. Basic LDAP server setup by completing one of these:
     * [OpenLDAP & Fortress QUICKSTART](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-SLAPD.md)
     * [OpenLDAP & Fortress QUICKSTART on DOCKER](https://github.com/apache/directory-fortress-core/blob/master/README-QUICKSTART-DOCKER-SLAPD.md)

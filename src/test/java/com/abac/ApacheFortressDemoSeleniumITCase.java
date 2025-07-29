@@ -4,11 +4,12 @@
 package com.abac;
 
 import java.lang.String;
+import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.junit.*;
@@ -48,7 +49,7 @@ public class ApacheFortressDemoSeleniumITCase
         baseUrl = "http://localhost:8080";
         //baseUrl = "https://fortress-a:8443";
         baseUrl += "/fortress-abac-demo";
-        driver.manage().timeouts().implicitlyWait( 2500, TimeUnit.MILLISECONDS );
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     private void info(String msg)
