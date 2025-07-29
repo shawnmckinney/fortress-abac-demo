@@ -1,5 +1,5 @@
 /*
- * © 2023 iamfortress.net
+ * © 2025 iamfortress.net
  */
 package com.abac;
 
@@ -47,7 +47,7 @@ public class ApacheFortressDemoSeleniumITCase
     {
         // Use Set the hostname:port:
         baseUrl = "http://localhost:8080";
-        //baseUrl = "https://fortress-a:8443";
+        //baseUrl = "https://fortress-c:8443";
         baseUrl += "/fortress-abac-demo";
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
